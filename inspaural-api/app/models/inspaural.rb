@@ -1,5 +1,5 @@
 class Inspaural < ApplicationRecord
-  has_many :quotes
+  has_and_belongs_to_many :quotes
   belongs_to :user
-  has_one :ambience
+  belongs_to :ambience
 end

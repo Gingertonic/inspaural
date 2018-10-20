@@ -1,4 +1,4 @@
 class Quote < ApplicationRecord
-  has_many :inspaurals
+  has_and_belongs_to_many :inspaurals
 
 end
