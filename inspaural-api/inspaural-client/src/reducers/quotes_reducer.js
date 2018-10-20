@@ -9,6 +9,8 @@ export default function quotesReducer(state = initState, action){
       return { ...state, loading: true}
 
     case "FETCH_QUOTES":
+      console.log("FETCH_QUOTES hit in reducer")
+      console.log(action.quotes)
       return { quotes: action.quotes, loading: false }
 
     default:

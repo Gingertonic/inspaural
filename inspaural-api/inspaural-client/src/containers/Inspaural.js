@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import Quotes from '../components/Quotes'
 import { connect } from 'react-redux'
+import { fetchQuotes, doSomething } from '../actions/quote_actions'
 
 class Inspaural extends Component {
 
 
   componentDidMount(){
-
+    console.log("Inspaural mounted!")
+    this.props.fetchQuotes()
   }
 
   render(){
@@ -24,4 +26,10 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(Inspaural)
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchQuotes: () => dispatch(fetchQuotes())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Inspaural)
