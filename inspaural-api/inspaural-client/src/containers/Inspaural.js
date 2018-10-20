@@ -1,26 +1,27 @@
 import React, { Component } from 'react'
 import Quotes from '../components/Quotes'
+import { connect } from 'react-redux'
 
 class Inspaural extends Component {
 
 
-  state = {
-    quotes: [{author: "Walt Disney", text: "If you can dream it, you can do it", audioUrl: "www.test.com/dream"}]
-  }
-
   componentDidMount(){
-    fetch('/quotes')
-      .then(resp => resp.json())
-      .then(quotes => this.setState({ quotes }))
+
   }
 
   render(){
     return(
       <div>
-        <Quotes quotes={this.state.quotes}/>
+        <Quotes quotes={this.props.quotes}/>
       </div>
     )
   }
 }
 
-export default Inspaural
+const mapStateToProps = state => {
+  return {
+    quotes: state.quotes.quotes
+  }
+}
+
+export default connect(mapStateToProps)(Inspaural)
