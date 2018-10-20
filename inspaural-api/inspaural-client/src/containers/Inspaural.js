@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Quotes from '../components/Quotes'
 
 class Inspaural extends Component {
 
@@ -14,10 +15,9 @@ class Inspaural extends Component {
   }
 
   render(){
-    const renderQuotes = this.state.quotes.map((quote, idx) => <p key={idx}><strong>{quote.text}</strong> by {quote.author}</p>)
-    return (
+    return(
       <div>
-        {renderQuotes}
+        <Quotes quotes={this.state.quotes}/>
       </div>
     )
   }
