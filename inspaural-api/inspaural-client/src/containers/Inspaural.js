@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import InnerDisplay from '../containers/InnerDisplay'
+import InnerNav from '../components/InnerNav'
 import Quotes from '../containers/Quotes'
 import Ambiences from '../containers/Ambiences'
 import Mixer from '../containers/Mixer'
 import { connect } from 'react-redux'
 import { fetchQuotes } from '../actions/audio_actions'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 class Inspaural extends Component {
 
@@ -26,6 +28,7 @@ class Inspaural extends Component {
                 <Route path = '/' component={InnerDisplay}/>
                 <Route exact path = '/mixer' component={Mixer}/>
                 <Route exact path = '/ambiences' render={props => <Ambiences {...props} ambiences={this.props.ambiences} />}/>
+                <InnerNav />
               </React.Fragment>
             </Router>
           </div>

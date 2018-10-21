@@ -20,7 +20,6 @@ font-family: 'Homemade Apple', cursive; */
 .outer-display {
   height: 95%;
   width: 95%;
-  /* border: 2px solid pink; */
   shape-outside: content-box;
 }
 
@@ -30,4 +29,30 @@ font-family: 'Homemade Apple', cursive; */
   font-family: 'Homemade Apple', cursive;
   shape-outside: content-box;
   background-color: lightblue;
+  display: inline;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.welcome {
+  height: 10%;
+  font-size: 2em;
+  color: white;
+  text-shadow: 2px 2px 4px #FFFFFF;
+}
+
+.nav-bar {
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 2px 4px grey;
+}
+
+a:hover {
+  text-shadow: 2px 2px 4px #FFFFFF;
 }

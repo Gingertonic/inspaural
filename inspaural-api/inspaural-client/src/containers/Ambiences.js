@@ -6,15 +6,23 @@ class Ambiences extends Component {
 
   state = {
     audioUrl: "",
-    playStatus: "STOPPED"
+    playStatus: "STOPPED",
+    volume: 40
   }
 
   handleOnClick = audioUrl => {
-    if (audioUrl === this.state.audioUrl) {
-      this.setState({
-        ...this.state,
-        playStatus: "STOPPED"
-      })
+    if (this.state.audioUrl === audioUrl){
+      if (this.state.playStatus === "PLAYING"){
+        this.setState({
+          ...this.state,
+          playStatus: "STOPPING"
+        })
+      } else {
+        this.setState({
+          ...this.state,
+          playStatus: "PLAYING"
+        })
+      }
     } else {
       this.setState({
         audioUrl: audioUrl,
@@ -27,11 +35,12 @@ class Ambiences extends Component {
     const renderAmbiences = this.props.ambiences.map(ambi => <Ambience key={ambi.id} ambience={ambi} handleOnClick={this.handleOnClick}/>)
 
     return (
-      <div>
-        <p> Ambiences </p>
-        {renderAmbiences}
-        <Sound url={this.state.audioUrl} autoload="true" loop="true" playStatus={this.state.playStatus}/>
-      </div>
+      <React.Fragment>
+        <div className="ambiences-container">
+          {renderAmbiences}
+        </div>
+        <Sound url={this.state.audioUrl} autoload="true" loop="true" playStatus={this.state.playStatus} volume={this.state.volume}/>
+      </React.Fragment>
     )
   }
 }

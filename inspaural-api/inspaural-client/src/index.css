@@ -1,4 +1,4 @@
-.quotes-container {
+.quotes-container, .ambiences-container {
   height: 100%;
   width: 100%;
   display: flex;
@@ -7,16 +7,33 @@
   align-content: space-between;
 }
 
+.ambiences-container, .mixer-container {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  justify-content: space-around;
+  height: 60%;
+}
+
 .quote {
   height: 18vh;
   width: 18vh;
-  /* border: 1px dashed black; */
+}
+
+.quote, .ambience {
   filter: grayscale(0.8) opacity(0.5);
   object-fit: cover;
 }
 
-.quote:hover {
+.quote:hover, .ambience:hover {
   filter: opacity(0.9);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ambience {
+  width: 35%;
+  height: 45%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 img[id^="blank"]{

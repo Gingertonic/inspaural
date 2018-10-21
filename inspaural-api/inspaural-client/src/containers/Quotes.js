@@ -6,7 +6,8 @@ class Quotes extends Component {
 
   state = {
     audioUrl: "",
-    playStatus: "STOPPED"
+    playStatus: "STOPPED",
+    volume: 80
   }
 
   handleOnMouseEnter = quoteUrl => {
@@ -28,7 +29,7 @@ class Quotes extends Component {
     return (
       <div className="quotes-container">
         {renderQuotes}
-        <Sound url={this.state.audioUrl} autoload={true} playStatus={this.state.playStatus}/>
+        <Sound url={this.state.audioUrl} autoload={true} playStatus={this.state.playStatus} volume={this.state.volume}/>
       </div>
     )
   }
