@@ -10,7 +10,7 @@ font-family: 'Homemade Apple', cursive; */
   text-align: center;
 }
 
-.inspaural, .outer-display, .inner-display, .quotes-container, .h1  {
+.inspaural, .outer-display, .inner-display, .quotes-container  {
   position: absolute;
   left: 50%;
   top: 50%;

@@ -4,8 +4,9 @@ const initState = {
     {id: 2, author: "Neil Armstrong", text: "One small step for man", audioUrl: "www.test.com/step"}
   ],
   ambiences: [
-    {id: 1, name: "Chill"},
-    {id: 2, name: "Soul"}],
+    {id: 1, name: "Chill", imageUrl: "https://www.worcsu.com/asset/Event/6013/chill.jpg", audioUrl: "https://www.looperman.com/media/loops/1297038/looperman-l-1297038-0141300-loner-mocha-jones-chill-x-spacey-pad-chords.mp3"},
+    {id: 2, name: "Soul", imageUrl: "https://cdn.dribbble.com/users/44134/screenshots/914778/soul.jpg", audioUrl: "https://www.looperman.com/media/loops/2158587/looperman-l-2158587-0136724-gentle-soul-drums.mp3"}
+  ],
   loading: false
 }
 

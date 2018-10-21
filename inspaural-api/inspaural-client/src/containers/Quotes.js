@@ -1,9 +1,3 @@
-
-// TODO:
-// map local state of quotes play hover/play status - change state on hover between PLAYING and STOPPED
-// render a <Sound> comp for each quote which will re-render on it's state change
-
-
 import React, { Component } from 'react'
 import Quote from '../components/Quote'
 import Sound from 'react-sound';
@@ -24,7 +18,7 @@ class Quotes extends Component {
 
   handleOnMouseLeave = () => {
     this.setState({
-      playStatus: "STOPPED"
+      playStatus: "PAUSED"
     })
   }
 
