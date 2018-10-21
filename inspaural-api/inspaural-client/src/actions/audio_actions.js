@@ -23,6 +23,6 @@ export const fetchAmbiences = () => {
     dispatch(loading());
     return fetch('/ambiences')
       .then(resp => resp.json())
-      .then(quotes => dispatch({type: "FETCH_AMBIENCES", ambiences}))
+      .then(ambiences => dispatch({type: "FETCH_AMBIENCES", ambiences}))
   }
 }
