@@ -5,7 +5,7 @@ import Quotes from '../containers/Quotes'
 import Ambiences from '../containers/Ambiences'
 import Mixer from '../containers/Mixer'
 import { connect } from 'react-redux'
-import { fetchQuotes } from '../actions/audio_actions'
+import { fetchQuotes, fetchAmbiences } from '../actions/audio_actions'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { NavLink } from 'react-router-dom';
 
@@ -14,7 +14,8 @@ class Inspaural extends Component {
 
   componentDidMount(){
     console.log("Inspaural mounted!")
-    this.props.fetchQuotes()
+    this.props.fetchQuotes();
+    this.props.fetchAmbiences();
   }
 
   render(){
@@ -47,7 +48,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchQuotes: () => dispatch(fetchQuotes())
+    fetchQuotes: () => dispatch(fetchQuotes()),
+    fetchAmbiences: () => dispatch(fetchAmbiences())
   }
 }
 
