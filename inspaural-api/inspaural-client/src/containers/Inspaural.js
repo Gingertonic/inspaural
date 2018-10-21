@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Quotes from '../components/Quotes'
+import InnerDisplay from '../containers/InnerDisplay'
 import { connect } from 'react-redux'
 import { fetchQuotes } from '../actions/audio_actions'
 
@@ -13,8 +14,13 @@ class Inspaural extends Component {
 
   render(){
     return(
-      <div>
-        <Quotes quotes={this.props.quotes}/>
+      <div className="inspaural">
+        <div className="outer-display">
+          <Quotes quotes={this.props.quotes}/>
+          <div className="inner-display">
+            <InnerDisplay />
+          </div>
+        </div>
       </div>
     )
   }

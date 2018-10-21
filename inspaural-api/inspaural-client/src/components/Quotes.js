@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Quotes = (props) => {
-  const renderQuotes = props.quotes.map((quote, idx) => <p key={idx}><strong>{quote.text}</strong> by {quote.author}</p>)
+  const renderQuotes = props.quotes.map(quote => <img className="quote" id={quote.id} key={quote.id} src={quote.audioUrl}/>)
   return (
-    <div>
+    <div className="quotes-container">
       {renderQuotes}
     </div>
   )
