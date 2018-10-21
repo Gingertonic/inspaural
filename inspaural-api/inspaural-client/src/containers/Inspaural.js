@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Quotes from '../components/Quotes'
+import Quotes from '../containers/Quotes'
 import InnerDisplay from '../containers/InnerDisplay'
 import { connect } from 'react-redux'
 import { fetchQuotes } from '../actions/audio_actions'
