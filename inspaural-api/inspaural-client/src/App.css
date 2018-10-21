@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Sacramento');
+/* font-family: 'Sacramento', cursive;
+font-family: 'Homemade Apple', cursive; */
+
 .inspaural {
   height: 90vh;
   width: 90vh;
@@ -6,7 +10,7 @@
   text-align: center;
 }
 
-.inspaural, .outer-display, .inner-display, .quotes-container  {
+.inspaural, .outer-display, .inner-display, .quotes-container, .h1  {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -23,7 +27,7 @@
 .inner-display {
   height: 50%;
   width: 50%;
-  /* border: 2px solid orange; */
+  font-family: 'Homemade Apple', cursive;
   shape-outside: content-box;
   background-color: lightblue;
 }

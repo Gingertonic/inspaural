@@ -4,7 +4,7 @@ class InnerDisplay extends Component {
   render(){
     return(
       <div className="Mixer">
-        <p>Hi from the mixer div within the inner display</p>
+        <h1>inspAural</h1>
       </div>
     )
   }

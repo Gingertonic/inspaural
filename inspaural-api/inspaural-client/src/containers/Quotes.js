@@ -11,12 +11,11 @@ import Sound from 'react-sound';
 class Quotes extends Component {
 
   state = {
-    audioUrl: 0,
+    audioUrl: "",
     playStatus: "STOPPED"
   }
 
   handleOnMouseEnter = quoteUrl => {
-    console.log(quoteUrl)
     this.setState({
       audioUrl: quoteUrl,
       playStatus: "PLAYING"
