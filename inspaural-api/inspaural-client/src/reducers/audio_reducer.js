@@ -30,7 +30,7 @@ export default function audioReducer(state = initState, action){
     case "FETCH_AMBIENCES":
       console.log("FETCH_AMBIENCES hit in reducer")
       console.log(action.ambiences)
-      return { ...state, quotes: action.ambiences, loading: false }
+      return { ...state, ambiences: action.ambiences, loading: false }
 
     default:
       return state
