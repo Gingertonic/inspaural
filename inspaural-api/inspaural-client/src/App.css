@@ -1,7 +1,7 @@
 .inspaural {
   height: 90vh;
   width: 90vh;
-  border: 2px solid black;
+  border: 2px solid lightblue;
   shape-outside: content-box;
   text-align: center;
 }
@@ -23,7 +23,7 @@
 .inner-display {
   height: 50%;
   width: 50%;
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
   shape-outside: content-box;
   background-color: lightblue;
 }

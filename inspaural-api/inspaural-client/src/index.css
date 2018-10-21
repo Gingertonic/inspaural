@@ -10,11 +10,15 @@
 .quote {
   height: 18vh;
   width: 18vh;
-  /* margin: 1em; */
-  border: 1px dashed black;
-  /* float: left; */
+  /* border: 1px dashed black; */
+  filter: grayscale(0.8) opacity(0.5);
+  object-fit: cover;
 }
 
-div[id^="blank"]{
+.quote:hover {
+  filter: opacity(0.9);
+}
+
+img[id^="blank"]{
   border: none;
 }
