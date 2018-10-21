@@ -14,9 +14,8 @@ const initState = {
 
 
 export default function audioReducer(state = initState, action){
-  let newQuotes;
   switch(action.type){
-    case "QUOTES_LOADING":
+    case "LOADING":
       return { ...state, loading: true}
 
     case "FETCH_QUOTES":
@@ -27,6 +26,11 @@ export default function audioReducer(state = initState, action){
       action.quotes.splice(9, 0, {id: "blank3", author: "", text: "", audioUrl: ""})
       action.quotes.splice(10, 0, {id: "blank4", author: "", text: "", audioUrl: ""})
       return { ...state, quotes: action.quotes, loading: false }
+
+    case "FETCH_AMBIENCES":
+      console.log("FETCH_AMBIENCES hit in reducer")
+      console.log(action.ambiences)
+      return { ...state, quotes: action.ambiences, loading: false }
 
     default:
       return state
