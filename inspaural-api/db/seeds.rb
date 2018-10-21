@@ -23,8 +23,10 @@ owl = Quote.create(author: "Javone", text: "It were a owl", imageUrl: "http://ww
 free = Quote.create(author: "John Inman", text: "I'm free", imageUrl: "http://www.johninman.co.uk/images/head.gif", audioUrl: "https://www.looperman.com/media/loops/134239/looperman-l-0134239-0076754-devodale-devodale-word-const-kit-alphabet.mp3")
 avi = Quote.create(author: "Avi", text: "Student for life", imageUrl: "https://flatiron-v3-production.imgix.net/avi-flombaum.jpg?h=240&w=240&facepad=2&fit=facearea&ixlib=imgixjs-3.3.0", audioUrl: "https://www.looperman.com/media/loops/68799/looperman-l-0068799-0001716-bosonhavoc-die-die-die-die.mp3")
 
-Ambience.create(name: "funk", audioUrl: "www.test.com/funk")
-Ambience.create(name: "love", audioUrl: "www.test.com/love")
+Ambience.create(name: "Chill", imageUrl: "https://www.worcsu.com/asset/Event/6013/chill.jpg", audioUrl: "https://www.looperman.com/media/loops/1297038/looperman-l-1297038-0141300-loner-mocha-jones-chill-x-spacey-pad-chords.mp3")
+Ambience.create(name: "Soul", imageUrl: "https://cdn.dribbble.com/users/44134/screenshots/914778/soul.jpg", audioUrl: "https://www.looperman.com/media/loops/2158587/looperman-l-2158587-0136724-gentle-soul-drums.mp3")
+Ambience.create(name: "Party", imageUrl: "http://titan.titanfm.co.uk/wp-content/uploads/2018/04/party.png", audioUrl: "https://www.looperman.com/media/loops/1657895/looperman-l-1657895-0138631-bass-party-loop-2.mp3")
+Ambience.create(name: "Drama", imageUrl: "http://africanleadership.co.uk/wp-content/uploads/2017/11/strength.jpg", audioUrl: "https://www.looperman.com/media/loops/2879189/looperman-l-2879189-0139015-piano-melody-cold-snow-strom-type.mp3")
 
 soulInsp = Inspaural.create(user_id: 1, ambience_id: 2, name: "Soul Positivity")
 loveInsp = Inspaural.create(user_id: 2, ambience_id: 1, name: "Loving time")
