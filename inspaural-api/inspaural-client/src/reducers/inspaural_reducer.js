@@ -1,11 +1,13 @@
 const initState = {
   id: 0,
   name: "Unsaved",
-  quote1: {id: 0, volume: 0},
-  quote2: {id: 0, volume: 0},
-  quote3: {id: 0, volume: 0},
-  quote4: {id: 0, volume: 0},
-  ambience: {id: 0, volume: 0},
+  selectedQuotes: {
+    quote1: {id: 0, volume: 0},
+    quote2: {id: 0, volume: 0},
+    quote3: {id: 0, volume: 0},
+    quote4: {id: 0, volume: 0},
+  },
+  selectedAmbience: {id: 0, volume: 0},
   loading: false
 }
 
@@ -18,34 +20,34 @@ export default function inspauralReducer(state = initState, action){
     //   return {...state, loading: false}
 
     case "UPDATE_AMBIENCE_ID":
-      return {...state, ambience: {...ambience id: action.ambienceId}, loading: false}
+      return {...state, selectedAmbience: {...state.selectedAmbience, id: action.ambienceId}, loading: false}
 
     case "UPDATE_AMBIENCE_VOLUME":
-      return {...state, ambience: {...ambience volume: action.ambienceVolume}, loading: false}
+      return {...state, selectedAmbience: {...state.selectedAmbience, volume: action.ambienceVolume}, loading: false}
 
     case "UPDATE_QUOTE_ONE_ID":
-      return {...state, quote1: {...quote1 id: action.quoteId}, loading: false}
+      return {...state, selectedQuotes: {...state.selectedQuotes, quote1: {...state.quote1, id: action.newQuoteId}}, loading: false}
 
     case "UPDATE_QUOTE_ONE_VOLUME":
-      return {...state, quote1: {...quote1 volume: action.quoteVolume}, loading: false}
+      return {...state, selectedQuotes: {...state.selectedQuotes, quote1: {...state.quote1, volume: action.newQuoteVolume}}, loading: false}
 
     case "UPDATE_QUOTE_TWO_ID":
-      return {...state, quote2: {...quote2 id: action.quoteId}, loading: false}
+      return {...state, selectedQuotes: {...state.selectedQuotes, quote2: {...state.quote2, id: action.newQuoteId}}, loading: false}
 
     case "UPDATE_QUOTE_TWO_VOLUME":
-      return {...state, quote2: {...quote2 volume: action.quoteVolume}, loading: false}
+      return {...state, selectedQuotes: {...state.selectedQuotes, quote2: {...state.quote2, volume: action.newQuoteVolume}}, loading: false}
 
     case "UPDATE_QUOTE_THREE_ID":
-      return {...state, quote3: {...quote3 id: action.quoteId}, loading: false}
+      return {...state, selectedQuotes: {...state.selectedQuotes, quote3: {...state.quote3, id: action.newQuoteId}}, loading: false}
 
     case "UPDATE_QUOTE_THREE_VOLUME":
-      return {...state, quote3: {...quote3 volume: action.quoteVolume}, loading: false}
+      return {...state, selectedQuotes: {...state.selectedQuotes, quote3: {...state.quote3, volume: action.newQuoteVolume}}, loading: false}
 
     case "UPDATE_QUOTE_FOUR_ID":
-      return {...state, quote4: {...quote4 id: action.quoteId}, loading: false}
+      return {...state, selectedQuotes: {...state.selectedQuotes, quote4: {...state.quote4, id: action.newQuoteId}}, loading: false}
 
     case "UPDATE_QUOTE_FOUR_VOLUME":
-      return {...state, quote4: {...quote4 volume: action.quoteVolume}, loading: false}
+      return {...state, selectedQuotes: {...state.selectedQuotes, quote4: {...state.quote4, volume: action.newQuoteVolume}}, loading: false}
 
 
 
