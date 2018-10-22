@@ -1,13 +1,24 @@
+const loadingImage = "https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif"
 const initState = {
   quotes: [
-    {id: 1, author: "Walt Disney", text: "If you can dream it, you can do it", audioUrl: "www.test.com/dream"},
-    {id: 2, author: "Neil Armstrong", text: "One small step for man", audioUrl: "www.test.com/step"}
+    {id: 1, author: "Loading...", text: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
+    {id: 2, author: "Loading...", text: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
+    {id: 3, author: "Loading...", text: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
+    {id: 4, author: "Loading...", text: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
+    {id: 5, author: "Loading...", text: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
+    {id: 6, author: "Loading...", text: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
+    {id: 7, author: "Loading...", text: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
+    {id: 8, author: "Loading...", text: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
+    {id: 9, author: "Loading...", text: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
+    {id: 10, author: "Loading...", text: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
+    {id: 11, author: "Loading...", text: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
+    {id: 12, author: "Loading...", text: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage}
   ],
   ambiences: [
-    {id: 1, name: "Chill", imageUrl: "https://www.worcsu.com/asset/Event/6013/chill.jpg", audioUrl: "https://www.looperman.com/media/loops/1297038/looperman-l-1297038-0141300-loner-mocha-jones-chill-x-spacey-pad-chords.mp3"},
-    {id: 2, name: "Soul", imageUrl: "https://cdn.dribbble.com/users/44134/screenshots/914778/soul.jpg", audioUrl: "https://www.looperman.com/media/loops/2158587/looperman-l-2158587-0136724-gentle-soul-drums.mp3"},
-    {id: 3, name: "Party", imageUrl: "http://titan.titanfm.co.uk/wp-content/uploads/2018/04/party.png", audioUrl: "https://www.looperman.com/media/loops/1657895/looperman-l-1657895-0138631-bass-party-loop-2.mp3"},
-    {id: 4, name: "Drama", imageUrl: "http://africanleadership.co.uk/wp-content/uploads/2017/11/strength.jpg", audioUrl: "https://www.looperman.com/media/loops/2879189/looperman-l-2879189-0139015-piano-melody-cold-snow-strom-type.mp3"}
+    {id: 1, name: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
+    {id: 2, name: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
+    {id: 3, name: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
+    {id: 4, name: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage}
   ],
   loading: false
 }
