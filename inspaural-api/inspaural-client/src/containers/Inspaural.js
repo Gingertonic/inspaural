@@ -52,8 +52,8 @@ const mapDispatchToProps = dispatch => {
   return {
     fetchQuotes: () => dispatch(fetchQuotes()),
     fetchAmbiences: () => dispatch(fetchAmbiences()),
-    updateQuoteOneId: () => dispatch(updateQuoteId()),
-    updateQuoteOneVolume: () => dispatch(updateQuoteVolume())
+    updateQuoteId: () => dispatch(updateQuoteId()),
+    updateQuoteVolume: () => dispatch(updateQuoteVolume())
   }
 }
 

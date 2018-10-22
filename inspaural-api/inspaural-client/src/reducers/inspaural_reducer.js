@@ -1,13 +1,13 @@
 const initState = {
   id: 0,
   name: "Unsaved",
-  selectedQuotes: {
-    quote1: {id: 0, volume: 0},
-    quote2: {id: 0, volume: 0},
-    quote3: {id: 0, volume: 0},
-    quote4: {id: 0, volume: 0},
-  },
-  selectedAmbience: {id: 0, volume: 0},
+  selectedQuotes: [
+    {quoteNum: 1, id: 1, volume: 0},
+    {quoteNum: 2, id: 3, volume: 0},
+    {quoteNum: 3, id: 6, volume: 0},
+    {quoteNum: 4, id: 10, volume: 0}
+  ],
+  selectedAmbience: {id: 3, volume: 0},
   loading: false
 }
 
