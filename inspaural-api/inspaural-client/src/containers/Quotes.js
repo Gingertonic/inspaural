@@ -7,7 +7,8 @@ class Quotes extends Component {
   state = {
     audioUrl: "",
     playStatus: "STOPPED",
-    volume: 80
+    volume: 80,
+    nextQuoteNum: 1
   }
 
   handleOnMouseEnter = quoteUrl => {
@@ -24,10 +25,15 @@ class Quotes extends Component {
   }
 
   handleOnClick = quoteId => {
-    let quoteNum = 1
-    console.log(quoteNum)
-    this.props.updateQuoteId(quoteNum, quoteId)
-    quoteNum === 4 ? quoteNum += 1 : quoteNum = 1
+    this.props.updateQuoteId(this.state.nextQuoteNum, quoteId)
+    let nextQuoteNum = this.increaseNextQuoteNum();
+    this.setState({
+      nextQuoteNum: nextQuoteNum
+    })
+  }
+
+  increaseNextQuoteNum = () => {
+    return (this.state.nextQuoteNum < 4) ? this.state.nextQuoteNum + 1 : 1
   }
 
   render(){
