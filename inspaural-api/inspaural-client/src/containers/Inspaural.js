@@ -7,7 +7,6 @@ import Mixer from '../containers/Mixer'
 import { connect } from 'react-redux'
 import { fetchQuotes, fetchAmbiences } from '../actions/audio_actions'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { NavLink } from 'react-router-dom';
 
 class Inspaural extends Component {
 
