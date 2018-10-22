@@ -42,7 +42,7 @@ class Ambiences extends Component {
         <div className="ambiences-container">
           {renderAmbiences}
         </div>
-        <Sound url={this.state.audioUrl} autoload="true" loop="true" playStatus={this.state.playStatus} volume={this.state.volume}/>
+        <Sound url={this.state.audioUrl} autoload loop playStatus={this.state.playStatus} volume={this.state.volume}/>
       </React.Fragment>
     )
   }

@@ -4,6 +4,7 @@ import InnerNav from '../components/InnerNav'
 import Quotes from '../containers/Quotes'
 import Ambiences from '../containers/Ambiences'
 import Mixer from '../containers/Mixer'
+import Playback from '../components/Playback'
 import { connect } from 'react-redux'
 import { fetchQuotes, fetchAmbiences } from '../actions/audio_actions'
 import { updateQuoteId, updateQuoteVolume, updateAmbienceId } from '../actions/inspaural_actions'
@@ -33,6 +34,9 @@ class Inspaural extends Component {
               </React.Fragment>
             </Router>
           </div>
+          <React.Fragment>
+            <Playback quotes={this.props.selectedQuotes} ambience={this.props.selectedAmbience} />
+          </React.Fragment>
         </div>
       </div>
     )
