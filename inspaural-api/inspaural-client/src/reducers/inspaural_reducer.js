@@ -12,6 +12,8 @@ const initState = {
 }
 
 export default function inspauralReducer(state = initState, action){
+  let idx;
+  let newState;
   switch(action.type){
     case "LOADING":
       return {...state, loading: true}
@@ -25,29 +27,32 @@ export default function inspauralReducer(state = initState, action){
     case "UPDATE_AMBIENCE_VOLUME":
       return {...state, selectedAmbience: {...state.selectedAmbience, volume: action.ambienceVolume}, loading: false}
 
-    case "UPDATE_QUOTE_ONE_ID":
-      return {...state, selectedQuotes: {...state.selectedQuotes, quote1: {...state.quote1, id: action.newQuoteId}}, loading: false}
+    case "UPDATE_QUOTE_1_ID":
+      idx = state.selectedQuotes.findIndex(quote => quote.quoteNum === 1)
+      newState = state
+      newState.selectedQuotes[idx].id = action.newQuoteId
+      return {...newState, loading: false}
 
-    case "UPDATE_QUOTE_ONE_VOLUME":
-      return {...state, selectedQuotes: {...state.selectedQuotes, quote1: {...state.quote1, volume: action.newQuoteVolume}}, loading: false}
-
-    case "UPDATE_QUOTE_TWO_ID":
-      return {...state, selectedQuotes: {...state.selectedQuotes, quote2: {...state.quote2, id: action.newQuoteId}}, loading: false}
-
-    case "UPDATE_QUOTE_TWO_VOLUME":
-      return {...state, selectedQuotes: {...state.selectedQuotes, quote2: {...state.quote2, volume: action.newQuoteVolume}}, loading: false}
-
-    case "UPDATE_QUOTE_THREE_ID":
-      return {...state, selectedQuotes: {...state.selectedQuotes, quote3: {...state.quote3, id: action.newQuoteId}}, loading: false}
-
-    case "UPDATE_QUOTE_THREE_VOLUME":
-      return {...state, selectedQuotes: {...state.selectedQuotes, quote3: {...state.quote3, volume: action.newQuoteVolume}}, loading: false}
-
-    case "UPDATE_QUOTE_FOUR_ID":
-      return {...state, selectedQuotes: {...state.selectedQuotes, quote4: {...state.quote4, id: action.newQuoteId}}, loading: false}
-
-    case "UPDATE_QUOTE_FOUR_VOLUME":
-      return {...state, selectedQuotes: {...state.selectedQuotes, quote4: {...state.quote4, volume: action.newQuoteVolume}}, loading: false}
+    // case "UPDATE_QUOTE_1_VOLUME":
+    //   return {...state, selectedQuotes: [...state.selectedQuotes, quote1: {...state.selectedQuotes.quote1, volume: action.newQuoteVolume}], loading: false}
+    //
+    // case "UPDATE_QUOTE_2_ID":
+    //   return {...state, selectedQuotes: [...state.selectedQuotes, quote2: {...state.quote2, id: action.newQuoteId}], loading: false}
+    //
+    // case "UPDATE_QUOTE_2_VOLUME":
+    //   return {...state, selectedQuotes: [...state.selectedQuotes, quote2: {...state.quote2, volume: action.newQuoteVolume}], loading: false}
+    //
+    // case "UPDATE_QUOTE_3_ID":
+    //   return {...state, selectedQuotes: [...state.selectedQuotes, quote3: {...state.quote3, id: action.newQuoteId}], loading: false}
+    //
+    // case "UPDATE_QUOTE_3_VOLUME":
+    //   return {...state, selectedQuotes: [...state.selectedQuotes, quote3: {...state.quote3, volume: action.newQuoteVolume}], loading: false}
+    //
+    // case "UPDATE_QUOTE_4_ID":
+    //   return {...state, selectedQuotes: [...state.selectedQuotes, quote4: {...state.quote4, id: action.newQuoteId}], loading: false}
+    //
+    // case "UPDATE_QUOTE_4_VOLUME":
+    //   return {...state, selectedQuotes: [...state.selectedQuotes, quote4: {...state.quote4, volume: action.newQuoteVolume}], loading: false}
 
 
 

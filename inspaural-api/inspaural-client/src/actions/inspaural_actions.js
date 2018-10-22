@@ -17,9 +17,10 @@ export const updateAmbienceVolume = ambienceVolume => {
 }
 
 export const updateQuoteId = (quoteNum, newQuoteId) => {
-  let type = `UPDATE_QUOTE_${quoteNum}_ID`;
+  let customType = `UPDATE_QUOTE_${quoteNum}_ID`;
+  console.log(customType)
   return {
-    type, newQuoteId
+    type: customType, newQuoteId
   }
 }
 
