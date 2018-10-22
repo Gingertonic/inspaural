@@ -14,17 +14,21 @@
   height: 60%;
 }
 
-.quote {
+.selected-quote, .unselected-quote {
   height: 18vh;
   width: 18vh;
 }
 
-.quote, .ambience {
+.selected-quote, .unselected-quote, .ambience {
   filter: grayscale(0.8) opacity(0.5);
   object-fit: cover;
 }
 
-.quote:hover, .ambience:hover {
+.selected-quote {
+  border: 2px solid lightblue;
+}
+
+.selected-quote, .unselected-quote:hover, .ambience:hover {
   filter: opacity(0.9);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

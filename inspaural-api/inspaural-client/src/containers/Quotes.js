@@ -24,7 +24,7 @@ class Quotes extends Component {
   }
 
   render(){
-    const renderQuotes = this.props.quotes.map(quote => <Quote quote={quote} selectedQuote={this.props.selectedQuotes.find(selQ => selQ.id === quote.id) ? true : false} handleOnMouseEnter={this.handleOnMouseEnter} handleOnMouseLeave={this.handleOnMouseLeave}/>)
+    const renderQuotes = this.props.quotes.map(quote => <Quote quote={quote} selectedQuote={this.props.selectedQuotes.find(selQ => selQ.id === quote.id) ? "selected-quote" : "unselected-quote"} handleOnMouseEnter={this.handleOnMouseEnter} handleOnMouseLeave={this.handleOnMouseLeave}/>)
 
     return (
       <div className="quotes-container">
