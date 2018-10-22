@@ -19,21 +19,21 @@
   width: 18vh;
 }
 
-.selected-quote, .unselected-quote, .ambience {
+.selected-quote, .unselected-quote, .selected-ambience, .unselected-ambience {
   filter: grayscale(0.8) opacity(0.5);
   object-fit: cover;
 }
 
-.selected-quote {
+.selected-quote, .selected-ambience {
   border: 2px solid lightblue;
 }
 
-.selected-quote, .unselected-quote:hover, .ambience:hover {
+.selected-quote, .selected-ambience, .unselected-quote:hover, .unselected-ambience:hover {
   filter: opacity(0.9);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.ambience {
+.selected-ambience, .unselected-ambience {
   width: 35%;
   height: 45%;
   border-radius: 50%;

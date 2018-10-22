@@ -10,29 +10,32 @@ class Ambiences extends Component {
     volume: 40
   }
 
-  handleOnClick = audioUrl => {
+  handleOnClick = (audioUrl, ambiId) => {
     if (this.state.audioUrl === audioUrl){
       if (this.state.playStatus === "PLAYING"){
         this.setState({
           ...this.state,
-          playStatus: "STOPPING"
+          playStatus: "STOPPED"
         })
+        this.props.updateAmbienceId(0)
       } else {
         this.setState({
           ...this.state,
           playStatus: "PLAYING"
         })
+        this.props.updateAmbienceId(ambiId)
       }
     } else {
       this.setState({
         audioUrl: audioUrl,
         playStatus: "PLAYING"
       })
+      this.props.updateAmbienceId(ambiId)
     }
   }
 
   render(){
-    const renderAmbiences = this.props.ambiences.map(ambi => <Ambience key={ambi.id} ambience={ambi} handleOnClick={this.handleOnClick}/>)
+    const renderAmbiences = this.props.ambiences.map(ambi => <Ambience key={ambi.id} ambience={ambi} selectedAmbience={(this.props.selectedAmbience.id === ambi.id) ? "selected-ambience" : "unselected-ambience"} handleOnClick={this.handleOnClick}/>)
 
     return (
       <React.Fragment>

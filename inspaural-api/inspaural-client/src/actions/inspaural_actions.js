@@ -5,6 +5,7 @@ const loading = () => {
 }
 
 export const updateAmbienceId = ambienceId => {
+  console.log("once in action, ambi id is " + ambienceId)
   return {
     type: "UPDATE_AMBIENCE_ID", ambienceId
   }
@@ -17,17 +18,15 @@ export const updateAmbienceVolume = ambienceVolume => {
 }
 
 export const updateQuoteId = (quoteNum, newQuoteId) => {
-  // let customType = `UPDATE_QUOTE_${quoteNum}_ID`;
-  console.log("quoteNum is " + quoteNum + " and newQuoteId is " + newQuoteId)
   return {
     type: "UPDATE_QUOTE_ID", quoteNum, newQuoteId
   }
 }
 
 export const updateQuoteVolume = (quoteNum, newQuoteVolume) => {
-  let type = `UPDATE_QUOTE_${quoteNum}_ID`;
+  let type = `UPDATE_QUOTE__ID`;
   return {
-    type, newQuoteVolume
+    type, newQuoteVolume, quoteNum, newQuoteVolume
   }
 }
 

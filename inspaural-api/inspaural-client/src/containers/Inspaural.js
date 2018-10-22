@@ -6,7 +6,7 @@ import Ambiences from '../containers/Ambiences'
 import Mixer from '../containers/Mixer'
 import { connect } from 'react-redux'
 import { fetchQuotes, fetchAmbiences } from '../actions/audio_actions'
-import { updateQuoteId, updateQuoteVolume } from '../actions/inspaural_actions'
+import { updateQuoteId, updateQuoteVolume, updateAmbienceId } from '../actions/inspaural_actions'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class Inspaural extends Component {
@@ -28,7 +28,7 @@ class Inspaural extends Component {
               <React.Fragment>
                 <Route path = '/' component={InnerDisplay}/>
                 <Route exact path = '/mixer' component={Mixer}/>
-                <Route exact path = '/ambiences' render={props => <Ambiences {...props} ambiences={this.props.ambiences} />}/>
+                <Route exact path = '/ambiences' render={props => <Ambiences {...props} ambiences={this.props.ambiences} selectedAmbience={this.props.selectedAmbience} updateAmbienceId={this.props.updateAmbienceId}/>}/>
                 <InnerNav />
               </React.Fragment>
             </Router>
@@ -44,7 +44,7 @@ const mapStateToProps = state => {
     quotes: state.audio.quotes,
     ambiences: state.audio.ambiences,
     selectedQuotes: state.currentInspaural.selectedQuotes,
-    selectedAmbiences: state.currentInspaural.selectedAmbience
+    selectedAmbience: state.currentInspaural.selectedAmbience
   }
 }
 
@@ -53,7 +53,8 @@ const mapDispatchToProps = dispatch => {
     fetchQuotes: () => dispatch(fetchQuotes()),
     fetchAmbiences: () => dispatch(fetchAmbiences()),
     updateQuoteId: (quoteNum, quoteId) => dispatch(updateQuoteId(quoteNum, quoteId)),
-    updateQuoteVolume: () => dispatch(updateQuoteVolume())
+    updateQuoteVolume: () => dispatch(updateQuoteVolume()),
+    updateAmbienceId: (ambienceId) => dispatch(updateAmbienceId(ambienceId))
   }
 }
 

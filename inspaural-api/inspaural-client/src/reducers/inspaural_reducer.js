@@ -22,6 +22,7 @@ export default function inspauralReducer(state = initState, action){
     //   return {...state, loading: false}
 
     case "UPDATE_AMBIENCE_ID":
+      console.log("once in reducer, ambi id is " + action.ambienceId)
       return {...state, selectedAmbience: {...state.selectedAmbience, id: action.ambienceId}, loading: false}
 
     case "UPDATE_AMBIENCE_VOLUME":
