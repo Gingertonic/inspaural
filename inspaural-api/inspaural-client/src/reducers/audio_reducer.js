@@ -1,4 +1,5 @@
 const loadingImage = "https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif"
+
 const initState = {
   quotes: [
     {id: 1, author: "Loading...", text: "Loading...", audioUrl: "Loading...", imageUrl: loadingImage},
