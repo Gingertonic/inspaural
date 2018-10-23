@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Quote from '../components/Quote'
 import Sound from 'react-sound';
+import Playback from '../components/Playback'
+
 
 class Quotes extends Component {
 
@@ -24,8 +26,8 @@ class Quotes extends Component {
     })
   }
 
-  handleOnClick = quoteId => {
-    this.props.updateQuoteId(this.state.nextQuoteNum, quoteId)
+  handleOnClick = (quoteId, quoteAudioUrl) => {
+    this.props.updateQuoteId(this.state.nextQuoteNum, quoteId, quoteAudioUrl)
     let nextQuoteNum = this.increaseNextQuoteNum();
     this.setState({
       nextQuoteNum: nextQuoteNum
@@ -48,6 +50,7 @@ class Quotes extends Component {
           playStatus={this.state.playStatus}
           volume={this.state.volume}
         />
+      <Playback quotes={this.props.selectedQuotes} ambience={this.props.selectedAmbience}/>
       </div>
     )
   }

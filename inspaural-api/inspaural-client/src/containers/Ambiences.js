@@ -13,24 +13,24 @@ class Ambiences extends Component {
   handleOnClick = (audioUrl, ambiId) => {
     if (this.state.audioUrl === audioUrl){
       if (this.state.playStatus === "PLAYING"){
-        this.setState({
-          ...this.state,
-          playStatus: "STOPPED"
-        })
+      //   this.setState({
+      //     ...this.state,
+      //     playStatus: "STOPPED"
+      //   })
         this.props.updateAmbienceId(0)
       } else {
-        this.setState({
-          ...this.state,
-          playStatus: "PLAYING"
-        })
-        this.props.updateAmbienceId(ambiId)
+        // this.setState({
+        //   ...this.state,
+        //   playStatus: "PLAYING"
+        // })
+        this.props.updateAmbienceId(ambiId, audioUrl)
       }
     } else {
-      this.setState({
-        audioUrl: audioUrl,
-        playStatus: "PLAYING"
-      })
-      this.props.updateAmbienceId(ambiId)
+      // this.setState({
+      //   audioUrl: audioUrl,
+      //   playStatus: "PLAYING"
+      // })
+      this.props.updateAmbienceId(ambiId, audioUrl)
     }
   }
 
@@ -42,7 +42,6 @@ class Ambiences extends Component {
         <div className="ambiences-container">
           {renderAmbiences}
         </div>
-        <Sound url={this.state.audioUrl} autoload loop playStatus={this.state.playStatus} volume={this.state.volume}/>
       </React.Fragment>
     )
   }

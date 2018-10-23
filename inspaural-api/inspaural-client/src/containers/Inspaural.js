@@ -23,20 +23,28 @@ class Inspaural extends Component {
     return(
       <div className="inspaural">
         <div className="outer-display">
-          <Quotes quotes={this.props.quotes} selectedQuotes={this.props.selectedQuotes} updateQuoteId={this.props.updateQuoteId}/>
+          <Quotes
+            quotes={this.props.quotes}
+            selectedQuotes={this.props.selectedQuotes}
+            selectedAmbience={this.props.selectedAmbience}
+            updateQuoteId={this.props.updateQuoteId}
+          />
           <div className="inner-display">
             <Router>
               <React.Fragment>
                 <Route path = '/' component={InnerDisplay}/>
                 <Route exact path = '/mixer' component={Mixer}/>
-                <Route exact path = '/ambiences' render={props => <Ambiences {...props} ambiences={this.props.ambiences} selectedAmbience={this.props.selectedAmbience} updateAmbienceId={this.props.updateAmbienceId}/>}/>
+                <Route exact path = '/ambiences'
+                  render={props => <Ambiences {...props}
+                    ambiences={this.props.ambiences}
+                    selectedAmbience={this.props.selectedAmbience}
+                    updateAmbienceId={this.props.updateAmbienceId}
+                  />}
+                />
                 <InnerNav />
               </React.Fragment>
             </Router>
           </div>
-          <React.Fragment>
-            <Playback quotes={this.props.selectedQuotes} ambience={this.props.selectedAmbience} />
-          </React.Fragment>
         </div>
       </div>
     )
@@ -56,9 +64,9 @@ const mapDispatchToProps = dispatch => {
   return {
     fetchQuotes: () => dispatch(fetchQuotes()),
     fetchAmbiences: () => dispatch(fetchAmbiences()),
-    updateQuoteId: (quoteNum, quoteId) => dispatch(updateQuoteId(quoteNum, quoteId)),
+    updateQuoteId: (quoteNum, quoteId, audioUrl) => dispatch(updateQuoteId(quoteNum, quoteId, audioUrl)),
     updateQuoteVolume: () => dispatch(updateQuoteVolume()),
-    updateAmbienceId: (ambienceId) => dispatch(updateAmbienceId(ambienceId))
+    updateAmbienceId: (ambienceId, audioUrl) => dispatch(updateAmbienceId(ambienceId, audioUrl))
   }
 }
 

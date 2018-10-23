@@ -3,7 +3,7 @@ import Sound from 'react-sound'
 
 const PlaybackTrack = props => {
   return (
-    <Sound url={props.track.audioUrl} playStatus="PLAYING" volume={props.track.volume}/>
+    <Sound url={props.track.audioUrl} playStatus="PLAYING" autoLoad loop volume={props.track.volume}/>
   )
 }
 

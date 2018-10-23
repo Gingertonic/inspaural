@@ -9,7 +9,7 @@ const Quote = props => {
       alt={props.quote.author}
       onMouseEnter={e => props.handleOnMouseEnter(props.quote.audioUrl)}
       onMouseLeave={e => props.handleOnMouseLeave()}
-      onClick={e => props.handleOnClick(props.quote.id)}
+      onClick={e => props.handleOnClick(props.quote.id, props.quote.audioUrl)}
     />
   )
 }
