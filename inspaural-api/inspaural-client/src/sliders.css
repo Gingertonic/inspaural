@@ -29,13 +29,14 @@
   height: 25px;
   text-align: center;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  background-color: white;
   font-weight: normal;
   font-size: 14px;
   transition: all 100ms ease-in;
   border-radius: 4px;
   display: inline-block;
-  color: white;
+  color: lightblue;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
 }
@@ -96,7 +97,7 @@
 * Rangeslider - Vertical slider
 */
 .rangeslider-vertical {
-  margin: 20px auto;
+  margin: 2vh auto;
   height: 20vh;
   width: 1vh;
   background-color: transparent;
@@ -107,7 +108,8 @@
 }
 .rangeslider-vertical .rangeslider__fill {
   width: 100%;
-  background-color: #7cb342;
+  /* background-color: #7cb342; */
+  background-image: linear-gradient(to top, #0f6440, #3a6914, #6c6600, #a65400, #e10808);
   box-shadow: none;
   bottom: 0;
 }
