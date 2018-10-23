@@ -2,11 +2,17 @@ import React, { Component } from 'react'
 import Slider from 'react-rangeslider'
 
 class Mixer extends Component {
-  const renderQuoteSliders = this.props.tracks
+
   render(){
     return (
-      {renderQuoteSliders}
-
+      <Slider
+          min={0}
+          max={100}
+          value={60}
+          onChangeStart={this.handleChangeStart}
+          onChange={this.handleChange}
+          onChangeComplete={this.handleChangeComplete}
+        />
     )
   }
 }
