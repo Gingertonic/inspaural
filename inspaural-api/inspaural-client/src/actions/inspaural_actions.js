@@ -23,7 +23,7 @@ export const updateQuoteId = (quoteNum, newQuoteId, newQuoteAudioUrl) => {
   }
 }
 
-export const updateQuoteVolume = (quoteNum, newQuoteVolume) => {
+export const updateQuoteVolume = (newQuoteVolume, quoteNum) => {
   let type = `UPDATE_QUOTE_VOLUME`;
   return {
     type, quoteNum, newQuoteVolume

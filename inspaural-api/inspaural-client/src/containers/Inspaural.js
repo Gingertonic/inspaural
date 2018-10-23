@@ -25,9 +25,13 @@ class Inspaural extends Component {
         <div className="outer-display">
           <Quotes
             quotes={this.props.quotes}
-            selectedQuotes={this.props.selectedQuotes}
-            selectedAmbience={this.props.selectedAmbience}
+            selectedQuoteIds={this.props.selectedQuoteIds}
             updateQuoteId={this.props.updateQuoteId}
+            selectedAmbience={this.props.selectedAmbience}
+            selectedQuote1={this.props.selectedQuote1}
+            selectedQuote2={this.props.selectedQuote2}
+            selectedQuote3={this.props.selectedQuote3}
+            selectedQuote4={this.props.selectedQuote4}
           />
           <div className="inner-display">
             <Router>
@@ -35,8 +39,6 @@ class Inspaural extends Component {
                 <Route path = '/' component={InnerDisplay}/>
                 <Route exact path = '/mixer'
                   render={props => <Mixer {...props}
-                    selectedQuotes={this.props.selectedQuotes}
-                    selectedAmbience={this.props.selectedAmbience}
                     updateQuoteVolume={this.props.updateQuoteVolume}
                     updateAmbienceVolume={this.props.updateAmbienceVolume}
                   />}
@@ -63,7 +65,12 @@ const mapStateToProps = state => {
     quotes: state.audio.quotes,
     ambiences: state.audio.ambiences,
     selectedQuotes: state.currentInspaural.selectedQuotes,
-    selectedAmbience: state.currentInspaural.selectedAmbience
+    selectedAmbience: state.currentInspaural.selectedAmbience,
+    selectedQuote1: state.currentInspaural.quote1,
+    selectedQuote2: state.currentInspaural.quote2,
+    selectedQuote3: state.currentInspaural.quote3,
+    selectedQuote4: state.currentInspaural.quote4,
+    selectedQuoteIds: state.currentInspaural.selectedQuoteIds
   }
 }
 

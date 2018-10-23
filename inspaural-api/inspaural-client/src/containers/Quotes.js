@@ -39,19 +39,31 @@ class Quotes extends Component {
   }
 
   render(){
-    const renderQuotes = this.props.quotes.map(quote => <Quote quote={quote} selectedQuote={this.props.selectedQuotes.find(selQ => selQ.id === quote.id) ? "selected-quote" : "unselected-quote"} handleOnMouseEnter={this.handleOnMouseEnter} handleOnMouseLeave={this.handleOnMouseLeave} handleOnClick={this.handleOnClick}/>)
+    const renderQuotes = this.props.quotes.map(quote => <Quote quote={quote} selectedQuote={this.props.selectedQuoteIds.includes(quote.id) ? "selected-quote" : "unselected-quote"} handleOnMouseEnter={this.handleOnMouseEnter} handleOnMouseLeave={this.handleOnMouseLeave} handleOnClick={this.handleOnClick}/>)
 
     return (
-      <div className="quotes-container">
-        {renderQuotes}
-        <Sound
-          url={this.state.audioUrl}
-          autoload={true}
-          playStatus={this.state.playStatus}
-          volume={this.state.volume}
-        />
-      <Playback quotes={this.props.selectedQuotes} ambience={this.props.selectedAmbience}/>
-      </div>
+      <React.Fragment>
+        <div className="quotes-container">
+          {renderQuotes}
+          <Sound
+            url={this.state.audioUrl}
+            autoload={true}
+            playStatus={this.state.playStatus}
+            volume={this.state.volume}
+          />
+          <div className="playback">
+              <div className="playback">
+                <Playback
+                  quote1={this.props.selectedQuote1}
+                  quote2={this.props.selectedQuote2}
+                  quote3={this.props.selectedQuote3}
+                  quote4={this.props.selectedQuote4}
+                  ambience={this.props.selectedAmbience}
+                />
+              </div>
+          </div>
+        </div>
+      </React.Fragment>
     )
   }
 }
