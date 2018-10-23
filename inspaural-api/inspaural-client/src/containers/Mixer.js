@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
+import Slider from 'react-rangeslider'
 
 class Mixer extends Component {
+  const renderQuoteSliders = this.props.tracks
   render(){
     return (
-      <p> Mixer </p>
+      {renderQuoteSliders}
+
     )
   }
 }
