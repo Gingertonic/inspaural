@@ -4,7 +4,7 @@ class InnerDisplay extends Component {
   render(){
     return(
       <div className="welcome">
-        inspAural
+        inspaural
       </div>
     )
   }
