@@ -26,7 +26,7 @@ export default function inspauralReducer(state = initState, action){
       return {...state, selectedAmbience: {...state.selectedAmbience, id: action.ambienceId, audioUrl: action.newAmbienceAudioUrl}, loading: false}
 
     case "UPDATE_AMBIENCE_VOLUME":
-      return {...state, selectedAmbience: {...state.selectedAmbience, volume: action.ambienceVolume}, loading: false}
+      return {...state, selectedAmbience: {...state.selectedAmbience, volume: action.newAmbienceVolume}, loading: false}
 
     case "UPDATE_QUOTE_ID":
       idx = state.selectedQuotes.findIndex(quote => quote.quoteNum === action.quoteNum)
@@ -35,9 +35,11 @@ export default function inspauralReducer(state = initState, action){
       newState.selectedQuotes[idx].audioUrl = action.newQuoteAudioUrl
       return {...newState, loading: false}
 
-    // case "UPDATE_QUOTE_1_VOLUME":
-    //   return {...state, selectedQuotes: [...state.selectedQuotes, quote1: {...state.selectedQuotes.quote1, volume: action.newQuoteVolume}], loading: false}
-    //
+    case "UPDATE_QUOTE_VOLUME":
+      idx = state.selectedQuotes.findIndex(quote => quote.quoteNum === action.quoteNum)
+      newState = state
+      newState.selectedQuotes[idx].volume = action.quoteNum
+      return {...newState, loading: false}
 
 
     // case "SAVE_INSPAURAL":

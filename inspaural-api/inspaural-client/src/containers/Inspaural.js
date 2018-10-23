@@ -7,7 +7,7 @@ import Mixer from '../containers/Mixer'
 import Playback from '../components/Playback'
 import { connect } from 'react-redux'
 import { fetchQuotes, fetchAmbiences } from '../actions/audio_actions'
-import { updateQuoteId, updateQuoteVolume, updateAmbienceId } from '../actions/inspaural_actions'
+import { updateQuoteId, updateQuoteVolume, updateAmbienceId, updateAmbienceVolume } from '../actions/inspaural_actions'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class Inspaural extends Component {
@@ -33,7 +33,14 @@ class Inspaural extends Component {
             <Router>
               <React.Fragment>
                 <Route path = '/' component={InnerDisplay}/>
-                <Route exact path = '/mixer' component={Mixer}/>
+                <Route exact path = '/mixer'
+                  render={props => <Mixer {...props}
+                    selectedQuotes={this.props.selectedQuotes}
+                    selectedAmbience={this.props.selectedAmbience}
+                    updateQuoteVolume={this.props.updateQuoteVolume}
+                    updateAmbienceVolume={this.props.updateAmbienceVolume}
+                  />}
+                />
                 <Route exact path = '/ambiences'
                   render={props => <Ambiences {...props}
                     ambiences={this.props.ambiences}
@@ -65,8 +72,9 @@ const mapDispatchToProps = dispatch => {
     fetchQuotes: () => dispatch(fetchQuotes()),
     fetchAmbiences: () => dispatch(fetchAmbiences()),
     updateQuoteId: (quoteNum, quoteId, audioUrl) => dispatch(updateQuoteId(quoteNum, quoteId, audioUrl)),
-    updateQuoteVolume: () => dispatch(updateQuoteVolume()),
-    updateAmbienceId: (ambienceId, audioUrl) => dispatch(updateAmbienceId(ambienceId, audioUrl))
+    updateQuoteVolume: (quoteNum, newVolume) => dispatch(updateQuoteVolume(quoteNum, newVolume)),
+    updateAmbienceId: (ambienceId, audioUrl) => dispatch(updateAmbienceId(ambienceId, audioUrl)),
+    updateAmbienceVolume: newVol => dispatch(updateAmbienceVolume(newVol))
   }
 }
 

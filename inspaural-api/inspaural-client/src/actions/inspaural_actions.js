@@ -11,9 +11,9 @@ export const updateAmbienceId = (ambienceId, newAmbienceAudioUrl) => {
   }
 }
 
-export const updateAmbienceVolume = ambienceVolume => {
+export const updateAmbienceVolume = newAmbienceVolume => {
   return {
-    type: "UPDATE_AMBIENCE_VOLUME", ambienceVolume
+    type: "UPDATE_AMBIENCE_VOLUME", newAmbienceVolume
   }
 }
 
@@ -26,7 +26,7 @@ export const updateQuoteId = (quoteNum, newQuoteId, newQuoteAudioUrl) => {
 export const updateQuoteVolume = (quoteNum, newQuoteVolume) => {
   let type = `UPDATE_QUOTE_VOLUME`;
   return {
-    type, newQuoteVolume, quoteNum, newQuoteVolume
+    type, quoteNum, newQuoteVolume
   }
 }
 
