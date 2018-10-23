@@ -26,8 +26,8 @@ class Quotes extends Component {
     })
   }
 
-  handleOnClick = (quoteId, quoteAudioUrl) => {
-    this.props.updateQuoteId(this.state.nextQuoteNum, quoteId, quoteAudioUrl)
+  handleOnClick = (quoteId, quoteAudioUrl, newQuoteImageUrl) => {
+    this.props.updateQuoteId(this.state.nextQuoteNum, quoteId, quoteAudioUrl, newQuoteImageUrl)
     let nextQuoteNum = this.increaseNextQuoteNum();
     this.setState({
       nextQuoteNum: nextQuoteNum

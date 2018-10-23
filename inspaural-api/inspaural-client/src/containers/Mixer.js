@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Slider from 'react-rangeslider'
 import MixerSlider from '../components/MixerSlider'
-import MixerSlider1 from '../components/MixerSlider1'
 import { connect } from 'react-redux'
 
 class Mixer extends Component {

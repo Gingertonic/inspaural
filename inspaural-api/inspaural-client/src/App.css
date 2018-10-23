@@ -35,19 +35,20 @@ font-family: 'Homemade Apple', cursive; */
 
 .welcome {
   height: 10%;
-  font-size: 2em;
+  font-size: 5vh;
   color: white;
   text-shadow: 2px 2px 4px #FFFFFF;
 }
 
 .nav-bar {
-  height: 10%;
+  height: 5vh;
   display: flex;
   justify-content: space-around;
   padding-bottom: 10%;
 }
 
 a {
+  font-size: 2vh;
   text-decoration: none;
   color: white;
   text-shadow: 2px 2px 4px grey;

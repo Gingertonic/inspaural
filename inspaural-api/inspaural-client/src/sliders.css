@@ -26,7 +26,7 @@
 }
 .rangeslider .rangeslider__handle-tooltip {
   width: 40px;
-  height: 40px;
+  height: 25px;
   text-align: center;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
@@ -97,8 +97,8 @@
 */
 .rangeslider-vertical {
   margin: 20px auto;
-  height: 150px;
-  max-width: 10px;
+  height: 20vh;
+  width: 1vh;
   background-color: transparent;
 }
 .rangeslider-vertical .rangeslider__fill,
@@ -112,8 +112,8 @@
   bottom: 0;
 }
 .rangeslider-vertical .rangeslider__handle {
-  width: 30px;
-  height: 10px;
+  width: 3vh;
+  height: 1vh;
   left: -10px;
   box-shadow: none;
 }

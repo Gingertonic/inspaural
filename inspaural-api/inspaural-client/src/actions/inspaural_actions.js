@@ -4,10 +4,10 @@ const loading = () => {
   }
 }
 
-export const updateAmbienceId = (ambienceId, newAmbienceAudioUrl) => {
+export const updateAmbienceId = (ambienceId, newAmbienceAudioUrl, newAmbienceImageUrl) => {
   console.log("once in action, ambi id is " + ambienceId)
   return {
-    type: "UPDATE_AMBIENCE_ID", ambienceId, newAmbienceAudioUrl
+    type: "UPDATE_AMBIENCE_ID", ambienceId, newAmbienceAudioUrl, newAmbienceImageUrl
   }
 }
 
@@ -17,9 +17,9 @@ export const updateAmbienceVolume = newAmbienceVolume => {
   }
 }
 
-export const updateQuoteId = (quoteNum, newQuoteId, newQuoteAudioUrl) => {
+export const updateQuoteId = (quoteNum, newQuoteId, newQuoteAudioUrl, newQuoteImageUrl) => {
   return {
-    type: "UPDATE_QUOTE_ID", quoteNum, newQuoteId, newQuoteAudioUrl
+    type: "UPDATE_QUOTE_ID", quoteNum, newQuoteId, newQuoteAudioUrl, newQuoteImageUrl
   }
 }
 
