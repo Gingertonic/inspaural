@@ -63,7 +63,7 @@ img[id^="blank"]{
 
 .mixer-track-thumb {
   height: 5vh;
-  width: 7vh;
+  width: 6vh;
   border-radius: 50%;
   object-fit: cover;
   filter: grayscale(0.5);
