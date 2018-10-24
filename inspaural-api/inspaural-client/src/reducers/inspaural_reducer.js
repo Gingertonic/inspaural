@@ -22,6 +22,16 @@ export default function inspauralReducer(state = initState, action){
     // case "FETCH_INSPAURAL":
     //   return {...state, loading: false}
 
+    case "RESET_QUOTES":
+      return {
+        ...state,
+        selectedQuoteIds: [0, 0, 0, 0],
+        quote1: {quoteNum: 1, id: 0, volume: 40, audioUrl: "", imageUrl: loadingImage},
+        quote2: {quoteNum: 2, id: 0, volume: 40, audioUrl: "", imageUrl: loadingImage},
+        quote3: {quoteNum: 3, id: 0, volume: 40, audioUrl: "", imageUrl: loadingImage},
+        quote4: {quoteNum: 4, id: 0, volume: 40, audioUrl: "", imageUrl: loadingImage}
+      }
+
     case "UPDATE_AMBIENCE_ID":
       console.log("once in reducer, ambi id is " + action.ambienceId)
       return {...state, selectedAmbience: {...state.selectedAmbience, id: action.ambienceId, audioUrl: action.newAmbienceAudioUrl, imageUrl: action.newAmbienceImageUrl}, loading: false}

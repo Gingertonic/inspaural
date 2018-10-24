@@ -7,7 +7,7 @@ import Mixer from '../containers/Mixer'
 import Playback from '../components/Playback'
 import { connect } from 'react-redux'
 import { fetchQuotes, fetchAmbiences } from '../actions/audio_actions'
-import { updateQuoteId, updateQuoteVolume, updateAmbienceId, updateAmbienceVolume } from '../actions/inspaural_actions'
+import { updateQuoteId, updateQuoteVolume, updateAmbienceId, updateAmbienceVolume, resetQuotes } from '../actions/inspaural_actions'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class Inspaural extends Component {
@@ -32,6 +32,7 @@ class Inspaural extends Component {
             selectedQuote2={this.props.selectedQuote2}
             selectedQuote3={this.props.selectedQuote3}
             selectedQuote4={this.props.selectedQuote4}
+            resetQuotes={this.props.resetQuotes}
           />
           <div className="inner-display">
             <Router>
@@ -81,7 +82,8 @@ const mapDispatchToProps = dispatch => {
     updateQuoteId: (quoteNum, quoteId, audioUrl, imageUrl) => dispatch(updateQuoteId(quoteNum, quoteId, audioUrl, imageUrl)),
     updateQuoteVolume: (quoteNum, newVolume) => dispatch(updateQuoteVolume(quoteNum, newVolume)),
     updateAmbienceId: (ambienceId, audioUrl, imageUrl) => dispatch(updateAmbienceId(ambienceId, audioUrl, imageUrl)),
-    updateAmbienceVolume: newVol => dispatch(updateAmbienceVolume(newVol))
+    updateAmbienceVolume: newVol => dispatch(updateAmbienceVolume(newVol)),
+    resetQuotes: () => dispatch(resetQuotes())
   }
 }
 

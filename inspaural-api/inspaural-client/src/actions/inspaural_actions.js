@@ -30,6 +30,12 @@ export const updateQuoteVolume = (newQuoteVolume, quoteNum) => {
   }
 }
 
+export const resetQuotes = () => {
+  return {
+    type: "RESET_QUOTES"
+  }
+}
+
 // export const updateQuoteOneId = quoteId => {
 //   return {
 //     type: "UPDATE_QUOTE_ONE_ID", quoteId

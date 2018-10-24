@@ -38,6 +38,10 @@ class Quotes extends Component {
     return (this.state.nextQuoteNum < 4) ? this.state.nextQuoteNum + 1 : 1
   }
 
+  handleOnReset = () => {
+    this.props.resetQuotes()
+  }
+
   render(){
     const renderQuotes = this.props.quotes.map(quote => <Quote quote={quote} selectedQuote={this.props.selectedQuoteIds.includes(quote.id) ? "selected-quote" : "unselected-quote"} handleOnMouseEnter={this.handleOnMouseEnter} handleOnMouseLeave={this.handleOnMouseLeave} handleOnClick={this.handleOnClick}/>)
 
@@ -45,6 +49,13 @@ class Quotes extends Component {
       <React.Fragment>
         <div className="quotes-container">
           {renderQuotes}
+          <img
+            className="reset-quotes"
+            id="reset-quotes"
+            src="http://www.weareclear.co.uk/wp-content/uploads/2017/12/logo.png"
+            alt="reset-button"
+            onClick={this.handleOnReset}
+          />
           <Sound
             url={this.state.audioUrl}
             autoload={true}

@@ -23,14 +23,14 @@
 }
 
 
-.selected-quote, .unselected-quote {
+.selected-quote, .unselected-quote, .reset-quotes {
   /* height: 18vh;
   width: 18vh; */
   height: 25%;
   width: 25%;
 }
 
-.selected-quote, .unselected-quote, .selected-ambience, .unselected-ambience {
+.selected-quote, .unselected-quote, .selected-ambience, .unselected-ambience, .reset-quotes {
   filter: grayscale(0.8) opacity(0.5);
   object-fit: cover;
 }
@@ -45,7 +45,7 @@
   border: 1px solid lightblue;
 }
 
-.selected-quote, .selected-ambience, .unselected-quote:hover, .unselected-ambience:hover {
+.selected-quote, .selected-ambience, .unselected-quote:hover, .unselected-ambience:hover, .reset-quotes:hover {
   filter: opacity(0.9);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

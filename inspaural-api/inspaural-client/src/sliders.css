@@ -54,7 +54,7 @@
 /**
 * Rangeslider - Horizontal slider
 */
-.rangeslider-horizontal {
+/* .rangeslider-horizontal {
   height: 12px;
   border-radius: 10px;
 }
@@ -81,8 +81,8 @@
   border-radius: 50%;
   background-color: #dadada;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) inset, 0 -1px 3px rgba(0, 0, 0, 0.4) inset;
-}
-.rangeslider-horizontal .rangeslider__handle-tooltip {
+} */
+/* .rangeslider-horizontal .rangeslider__handle-tooltip {
   top: -55px;
 }
 .rangeslider-horizontal .rangeslider__handle-tooltip:after {
@@ -92,7 +92,7 @@
   left: 50%;
   bottom: -8px;
   transform: translate3d(-50%, 0, 0);
-}
+} */
 /**
 * Rangeslider - Vertical slider
 */
@@ -114,9 +114,9 @@
   bottom: 0;
 }
 .rangeslider-vertical .rangeslider__handle {
-  width: 3vh;
+  width: 4vh;
   height: 1vh;
-  left: -10px;
+  left: -1.5vh;
   box-shadow: none;
 }
 .rangeslider-vertical .rangeslider__handle-tooltip {
