@@ -7,29 +7,28 @@ class Ambiences extends Component {
   state = {
     audioUrl: "",
     playStatus: "STOPPED",
-    volume: 40
   }
 
   handleOnClick = (audioUrl, ambiId, imageUrl) => {
     if (this.state.audioUrl === audioUrl){
       if (this.state.playStatus === "PLAYING"){
-      //   this.setState({
-      //     ...this.state,
-      //     playStatus: "STOPPED"
-      //   })
+        this.setState({
+          ...this.state,
+          playStatus: "STOPPED"
+        })
         this.props.updateAmbienceId(0)
       } else {
-        // this.setState({
-        //   ...this.state,
-        //   playStatus: "PLAYING"
-        // })
+        this.setState({
+          ...this.state,
+          playStatus: "PLAYING"
+        })
         this.props.updateAmbienceId(ambiId, audioUrl, imageUrl)
       }
     } else {
-      // this.setState({
-      //   audioUrl: audioUrl,
-      //   playStatus: "PLAYING"
-      // })
+      this.setState({
+        audioUrl: audioUrl,
+        playStatus: "PLAYING"
+      })
       this.props.updateAmbienceId(ambiId, audioUrl, imageUrl)
     }
   }
