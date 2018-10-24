@@ -19,8 +19,10 @@ class Inspaural extends Component {
     this.props.fetchAmbiences();
   }
 
-  saveInspaural = () => {
-    this.saveInspauralToDB(this.props.selectedQuote1, this.props.selectedQuote2, this.props.selectedQuote3, this.props.selectedQuote4, this.props.selectedAmbience)
+  saveInspaural = e => {
+    e.preventDefault();
+    window.alert("Saved!")
+    // this.saveInspauralToDB(this.props.selectedQuote1, this.props.selectedQuote2, this.props.selectedQuote3, this.props.selectedQuote4, this.props.selectedAmbience)
   }
 
   render(){
@@ -69,7 +71,6 @@ const mapStateToProps = state => {
   return {
     quotes: state.audio.quotes,
     ambiences: state.audio.ambiences,
-
     selectedAmbience: state.currentInspaural.selectedAmbience,
     selectedQuote1: state.currentInspaural.quote1,
     selectedQuote2: state.currentInspaural.quote2,

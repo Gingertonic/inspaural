@@ -45,7 +45,7 @@ export const resetQuotes = () => {
 export const saveInspauralToDB = (q1, q2, q3, q4, a) => {
   return dispatch => {
     dispatch(loading());
-    return fetch('/inspaurals' {
+    return fetch('/inspaurals', {
       method: "POST",
       body: JSON.stringify(q1, q2, q3, q4, a)
     }).then(dispatch(loaded))

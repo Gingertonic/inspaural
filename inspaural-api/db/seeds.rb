@@ -28,8 +28,8 @@ Ambience.create(name: "Soul", imageUrl: "https://cdn.dribbble.com/users/44134/sc
 Ambience.create(name: "Party", imageUrl: "http://titan.titanfm.co.uk/wp-content/uploads/2018/04/party.png", audioUrl: "https://www.looperman.com/media/loops/1657895/looperman-l-1657895-0138631-bass-party-loop-2.mp3")
 Ambience.create(name: "Drama", imageUrl: "http://africanleadership.co.uk/wp-content/uploads/2017/11/strength.jpg", audioUrl: "https://www.looperman.com/media/loops/2879189/looperman-l-2879189-0139015-piano-melody-cold-snow-strom-type.mp3")
 
-soulInsp = Inspaural.create(user_id: 1, ambience_id: 2, name: "Soul Positivity")
-loveInsp = Inspaural.create(user_id: 2, ambience_id: 1, name: "Loving time")
+soulInsp = Inspaural.create(user_id: 1, ambience_id: 2, name: "Soul Positivity", quote1_vol: 40, quote2_vol: 50, quote3_vol: 60, quote4_vol: 45, ambience_vol: 35)
+loveInsp = Inspaural.create(user_id: 2, ambience_id: 1, name: "Loving time", quote1_vol: 50, quote2_vol: 20, quote3_vol: 40, quote4_vol: 37, ambience_vol: 43)
 
 loveInsp.quotes << heart
 soulInsp.quotes << bridge

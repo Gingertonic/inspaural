@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_21_083636) do
+ActiveRecord::Schema.define(version: 2018_10_24_203327) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,11 @@ ActiveRecord::Schema.define(version: 2018_10_21_083636) do
     t.integer "ambience_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "quote1_vol"
+    t.integer "quote2_vol"
+    t.integer "quote3_vol"
+    t.integer "quote4_vol"
+    t.integer "ambience_vol"
   end
 
   create_table "inspaurals_quotes", id: false, force: :cascade do |t|
