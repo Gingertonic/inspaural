@@ -48,7 +48,9 @@ export const saveInspauralToDB = (q1, q2, q3, q4, a) => {
     return fetch('/inspaurals', {
       method: "POST",
       body: JSON.stringify(q1, q2, q3, q4, a)
-    }).then(dispatch(loaded))
+    }).then(resp => resp.json())
+    .then(json => console.log(json))
+    .then(dispatch(loaded))
   }
 }
 

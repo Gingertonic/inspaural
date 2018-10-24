@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import InnerDisplay from '../containers/InnerDisplay'
 import InnerNav from '../components/InnerNav'
+import AllInspaurals from '../containers/AllInspaurals'
 import Quotes from '../containers/Quotes'
 import Ambiences from '../containers/Ambiences'
 import Mixer from '../containers/Mixer'
 import Playback from '../components/Playback'
 import { connect } from 'react-redux'
 import { fetchQuotes, fetchAmbiences } from '../actions/audio_actions'
+import { fetchInspaurals } from '../actions/session_actions'
 import { updateQuoteId, updateQuoteVolume, updateAmbienceId, updateAmbienceVolume, resetQuotes, saveInspauralToDB} from '../actions/inspaural_actions'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
@@ -19,10 +21,10 @@ class Inspaural extends Component {
     this.props.fetchAmbiences();
   }
 
-  saveInspaural = e => {
+  saveInspaural = (e, q1, q2, q3, q4, a) => {
     e.preventDefault();
-    window.alert("Saved!")
-    // this.saveInspauralToDB(this.props.selectedQuote1, this.props.selectedQuote2, this.props.selectedQuote3, this.props.selectedQuote4, this.props.selectedAmbience)
+    window.alert('Saved');
+    this.props.saveInspauralToDB(q1, q2, q3, q4, a)
   }
 
   render(){
@@ -57,6 +59,12 @@ class Inspaural extends Component {
                     updateAmbienceId={this.props.updateAmbienceId}
                   />}
                 />
+                <Route exact path = '/my-inspaurals'
+                  render={props => <AllInspaurals {...props}
+                    fetchInspaurals={this.props.fetchInspaurals}
+                    allInspaurals={this.props.allInspaurals}
+                  />}
+                />
               <InnerNav saveInspaural={this.saveInspaural}/>
               </React.Fragment>
             </Router>
@@ -76,7 +84,8 @@ const mapStateToProps = state => {
     selectedQuote2: state.currentInspaural.quote2,
     selectedQuote3: state.currentInspaural.quote3,
     selectedQuote4: state.currentInspaural.quote4,
-    selectedQuoteIds: state.currentInspaural.selectedQuoteIds
+    selectedQuoteIds: state.currentInspaural.selectedQuoteIds,
+    allInspaurals: state.session.inspaurals
   }
 }
 
@@ -84,6 +93,7 @@ const mapDispatchToProps = dispatch => {
   return {
     fetchQuotes: () => dispatch(fetchQuotes()),
     fetchAmbiences: () => dispatch(fetchAmbiences()),
+    fetchInspaurals: () => dispatch(fetchInspaurals()),
     updateQuoteId: (quoteNum, quoteId, audioUrl, imageUrl) => dispatch(updateQuoteId(quoteNum, quoteId, audioUrl, imageUrl)),
     updateQuoteVolume: (quoteNum, newVolume) => dispatch(updateQuoteVolume(quoteNum, newVolume)),
     updateAmbienceId: (ambienceId, audioUrl, imageUrl) => dispatch(updateAmbienceId(ambienceId, audioUrl, imageUrl)),

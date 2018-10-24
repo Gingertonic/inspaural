@@ -7,9 +7,14 @@
   align-content: space-between;
 }
 
-.ambiences-container, .mixer-container {
+.ambiences-container, .mixer-container, .inspaural-index-container {
   justify-content: space-around;
   height: 25vh;
+}
+
+.inspaural-index-container {
+  padding-top: 4vh;
+  padding-bottom: 4vh;
 }
 
 .ambiences-container {
@@ -73,4 +78,15 @@ img[id^="blank"]{
 .mixer-slider {
   width: 20%;
   height: 80%
+}
+
+.inspaural-li {
+  font-family: monospace;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.inspaural-li:hover {
+  color: white;
 }
