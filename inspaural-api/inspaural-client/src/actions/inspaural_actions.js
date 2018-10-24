@@ -4,6 +4,12 @@ const loading = () => {
   }
 }
 
+const loaded = () => {
+  return {
+    type: "LOADED"
+  }
+}
+
 export const updateAmbienceId = (ambienceId, newAmbienceAudioUrl, newAmbienceImageUrl) => {
   console.log("once in action, ambi id is " + ambienceId)
   return {
@@ -33,6 +39,16 @@ export const updateQuoteVolume = (newQuoteVolume, quoteNum) => {
 export const resetQuotes = () => {
   return {
     type: "RESET_QUOTES"
+  }
+}
+
+export const saveInspauralToDB = (q1, q2, q3, q4, a) => {
+  return dispatch => {
+    dispatch(loading());
+    return fetch('/inspaurals' {
+      method: "POST",
+      body: JSON.stringify(q1, q2, q3, q4, a)
+    }).then(dispatch(loaded))
   }
 }
 

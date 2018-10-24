@@ -19,6 +19,8 @@ export default function inspauralReducer(state = initState, action){
     case "LOADING":
       return {...state, loading: true}
 
+    case "LOADED":
+      return {...state, loading: false}
     // case "FETCH_INSPAURAL":
     //   return {...state, loading: false}
 

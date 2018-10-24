@@ -7,7 +7,7 @@ import Mixer from '../containers/Mixer'
 import Playback from '../components/Playback'
 import { connect } from 'react-redux'
 import { fetchQuotes, fetchAmbiences } from '../actions/audio_actions'
-import { updateQuoteId, updateQuoteVolume, updateAmbienceId, updateAmbienceVolume, resetQuotes } from '../actions/inspaural_actions'
+import { updateQuoteId, updateQuoteVolume, updateAmbienceId, updateAmbienceVolume, resetQuotes, saveInspauralToDB} from '../actions/inspaural_actions'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class Inspaural extends Component {
@@ -17,6 +17,10 @@ class Inspaural extends Component {
     console.log("Inspaural mounted!")
     this.props.fetchQuotes();
     this.props.fetchAmbiences();
+  }
+
+  saveInspaural = () => {
+    this.saveInspauralToDB(this.props.selectedQuote1, this.props.selectedQuote2, this.props.selectedQuote3, this.props.selectedQuote4, this.props.selectedAmbience)
   }
 
   render(){
@@ -51,7 +55,7 @@ class Inspaural extends Component {
                     updateAmbienceId={this.props.updateAmbienceId}
                   />}
                 />
-                <InnerNav />
+              <InnerNav saveInspaural={this.saveInspaural}/>
               </React.Fragment>
             </Router>
           </div>
@@ -65,7 +69,7 @@ const mapStateToProps = state => {
   return {
     quotes: state.audio.quotes,
     ambiences: state.audio.ambiences,
-    selectedQuotes: state.currentInspaural.selectedQuotes,
+
     selectedAmbience: state.currentInspaural.selectedAmbience,
     selectedQuote1: state.currentInspaural.quote1,
     selectedQuote2: state.currentInspaural.quote2,
@@ -83,7 +87,8 @@ const mapDispatchToProps = dispatch => {
     updateQuoteVolume: (quoteNum, newVolume) => dispatch(updateQuoteVolume(quoteNum, newVolume)),
     updateAmbienceId: (ambienceId, audioUrl, imageUrl) => dispatch(updateAmbienceId(ambienceId, audioUrl, imageUrl)),
     updateAmbienceVolume: newVol => dispatch(updateAmbienceVolume(newVol)),
-    resetQuotes: () => dispatch(resetQuotes())
+    resetQuotes: () => dispatch(resetQuotes()),
+    saveInspauralToDB: (q1, q2, q3, q4, a) => dispatch(saveInspauralToDB(q1, q2, q3, q4, a))
   }
 }
 
