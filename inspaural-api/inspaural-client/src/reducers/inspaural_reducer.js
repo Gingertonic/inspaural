@@ -2,7 +2,7 @@ const loadingImage = "https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/4321
 
 const initState = {
   id: 0,
-  name: "Unsaved",
+  name: "New Inspaural",
   selectedQuoteIds: [0, 0, 0, 0],
   quote1: {quoteNum: 1, id: 0, volume: 40, audioUrl: "", imageUrl: loadingImage},
   quote2: {quoteNum: 2, id: 0, volume: 40, audioUrl: "", imageUrl: loadingImage},

@@ -60,57 +60,9 @@ export const saveInspauralToDB = data => {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({inspaural: data})
+      body: JSON.stringify(data)
     }).then(resp => resp.json())
     .then(json => console.log(json))
     .then(dispatch(loaded))
   }
 }
-
-// export const updateQuoteOneId = quoteId => {
-//   return {
-//     type: "UPDATE_QUOTE_ONE_ID", quoteId
-//   }
-// }
-//
-// export const updateQuoteOneVolume = quoteVolume => {
-//   return {
-//     type: "UPDATE_QUOTE_ONE_VOLUME", quoteVolume
-//   }
-// }
-//
-// export const updateQuoteTwoId = quoteId => {
-//   return {
-//     type: "UPDATE_QUOTE_TWO_ID", quoteId
-//   }
-// }
-//
-// export const updateQuoteTwoVolume = quoteVolume => {
-//   return {
-//     type: "UPDATE_QUOTE_TWO_VOLUME", quoteVolume
-//   }
-// }
-//
-// export const updateQuoteThreeId = quoteId => {
-//   return {
-//     type: "UPDATE_QUOTE_THREE_ID", quoteId
-//   }
-// }
-//
-// export const updateQuoteThreeVolume = quoteVolume => {
-//   return {
-//     type: "UPDATE_QUOTE_THREE_VOLUME", quoteVolume
-//   }
-// }
-//
-// export const updateQuoteFourId = quoteId => {
-//   return {
-//     type: "UPDATE_QUOTE_FOUR_ID", quoteId
-//   }
-// }
-//
-// export const updateQuoteFourVolume = quoteVolume => {
-//   return {
-//     type: "UPDATE_QUOTE_FOUR_VOLUME", quoteVolume
-//   }
-// }
