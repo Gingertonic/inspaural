@@ -6,20 +6,23 @@ module Api
       end
 
       def create
-        newInspaural = Inspaural.find_or_create_by(inspaural_params)
-        newInspaural.name = params[:name]
-        newInspaural.ambience = Ambience.find(params[:selectedAmbience][:id])
-        newInspaural.user = User.find(1)
-        newInspaural.quote1_vol = params[:quote1][:volume]
-        newInspaural.quote2_vol = params[:quote2][:volume]
-        newInspaural.quote3_vol = params[:quote3][:volume]
-        newInspaural.quote4_vol = params[:quote4][:volume]
-        newInspaural.ambience_vol = params[:selectedAmbience][:volume]
-        params[:selectedQuoteIds].each{|id| newInspaural.quotes << Quote.find(id)}
-        if newInspaural.save
-          render :json => newInspaural
+        if params[:id] != 0
+          inspaural = Inspaural.find(params[:id])
         else
-          render :json => {"errors": newInspaural.errors.full_messages}
+          inspaural = Inspaural.new(inspaural_params)
+        end
+        inspaural.ambience = Ambience.find(params[:selectedAmbience][:id])
+        inspaural.user = User.find(1)
+        inspaural.quote1_vol = params[:quote1][:volume]
+        inspaural.quote2_vol = params[:quote2][:volume]
+        inspaural.quote3_vol = params[:quote3][:volume]
+        inspaural.quote4_vol = params[:quote4][:volume]
+        inspaural.ambience_vol = params[:selectedAmbience][:volume]
+        params[:selectedQuoteIds].each{|id| inspaural.quotes << Quote.find(id)}
+        if inspaural.save
+          render :json => inspaural
+        else
+          render :json => {"errors": inspaural.errors.full_messages}
         end
       end
 
@@ -34,7 +37,7 @@ module Api
 
       private
       def inspaural_params
-        params.require(:inspaural).permit(:id)
+        params.require(:inspaural).permit(:name)
       end
     end
   end

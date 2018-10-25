@@ -5,8 +5,7 @@ const InnerNav = props => {
   return (
     <div className="nav-bar">
      <NavLink to='/ambiences' exact>Ambiences</NavLink>
-     <a href="/" onClick={e => props.saveInspaural(e, 0, 0, 0, 0)}>Save</a>
-
+     <NavLink to="/my-inspaurals" exact onClick={props.saveInspaural}>Save</NavLink>
      <NavLink to='/mixer' exact>Mixer</NavLink>
     </div>
   )

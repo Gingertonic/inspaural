@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
+import { NavLink } from 'react-router-dom';
 
 class InnerDisplay extends Component {
   render(){
     return(
-      <div className="welcome">
-        inspaural
-      </div>
+      <NavLink to="/my-inspaurals" exact>
+        <div className="welcome">
+          inspaural
+        </div>
+      </NavLink>
     )
   }
 }
