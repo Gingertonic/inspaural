@@ -14,7 +14,7 @@ module Api
       end
 
       def show
-        render :json => Inspaural.all
+        render :json => Inspaural.find(params[:id])
       end
 
       def update

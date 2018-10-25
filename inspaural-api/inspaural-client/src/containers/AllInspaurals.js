@@ -7,6 +7,7 @@ class AllInspaurals extends Component {
   }
 
   loadInspaural = (e, inspId) => {
+    console.log("looking for inspaural with id " + inspId)
     e.preventDefault()
     this.props.fetchInspauralFromDb(inspId)
   }
