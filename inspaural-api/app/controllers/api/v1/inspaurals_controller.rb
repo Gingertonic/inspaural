@@ -6,10 +6,12 @@ module Api
       end
 
       def create
+        byebug
         render :json => Inspaural.all
       end
 
       def update
+        # PLACEHOLDER
         render :json => Inspaural.all
       end
 
@@ -17,7 +19,8 @@ module Api
         render :json => Inspaural.find(params[:id])
       end
 
-      def update
+      def destroy
+        # PLACEHOLDER
         render :json => Inspaural.all
       end
     end
