@@ -21,8 +21,20 @@ export default function inspauralReducer(state = initState, action){
 
     case "LOADED":
       return {...state, loading: false}
-    // case "FETCH_INSPAURAL":
-    //   return {...state, loading: false}
+
+    case "FETCH_INSPAURAL":
+      console.log(action.inspaural)
+      return {
+          id: action.inspaural.id,
+          name: action.inspaural.name,
+          selectedQuoteIds: action.inspaural.quotes.map(q => q.id),
+          quote1: {...state.quote1, id: action.inspaural.quotes[0].id, volume: action.inspaural.quote1_vol, audioUrl: action.inspaural.quotes[0].audioUrl, imageUrl: action.inspaural.quotes[0].imageUrl},
+          quote2: {...state.quote2, id: action.inspaural.quotes[1].id, volume: action.inspaural.quote2_vol, audioUrl: action.inspaural.quotes[1].audioUrl, imageUrl: action.inspaural.quotes[1].imageUrl},
+          quote3: {...state.quote3, id: action.inspaural.quotes[2].id, volume: action.inspaural.quote3_vol, audioUrl: action.inspaural.quotes[2].audioUrl, imageUrl: action.inspaural.quotes[2].imageUrl},
+          quote4: {...state.quote4, id: action.inspaural.quotes[3].id, volume: action.inspaural.quote4_vol, audioUrl: action.inspaural.quotes[3].audioUrl, imageUrl: action.inspaural.quotes[3].imageUrl},
+          selectedAmbience: {id: action.inspaural.ambience.id, volume: action.inspaural.ambience_vol, audioUrl: action.inspaural.ambience.audioUrl, imageUrl: action.inspaural.ambience.imageUrl},
+          loading: false
+        }
 
     case "RESET_QUOTES":
       return {

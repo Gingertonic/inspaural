@@ -15,8 +15,7 @@ export const fetchInspauralFromDb = inspId => {
     dispatch(loading());
     fetch('/inspaurals/' + inspId)
       .then(resp => resp.json())
-      .then(inspaural => console.log(inspaural))
-      // .then(inspaural => dispatch({type: "LOAD_INSPAURAL", inspId}))
+      .then(inspaural => dispatch({type: "FETCH_INSPAURAL", inspaural: inspaural}))
   }
 }
 

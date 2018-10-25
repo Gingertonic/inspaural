@@ -1,3 +1,3 @@
 class SimpleQuoteSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :audioUrl, :imageUrl
 end

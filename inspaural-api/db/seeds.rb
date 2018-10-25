@@ -32,5 +32,11 @@ soulInsp = Inspaural.create(user_id: 1, ambience_id: 2, name: "Soul Positivity",
 loveInsp = Inspaural.create(user_id: 2, ambience_id: 1, name: "Loving time", quote1_vol: 50, quote2_vol: 20, quote3_vol: 40, quote4_vol: 37, ambience_vol: 43)
 
 loveInsp.quotes << heart
+loveInsp.quotes << frankly
+loveInsp.quotes << hurts
+loveInsp.quotes << zelda
+
 soulInsp.quotes << bridge
 soulInsp.quotes << yes
+soulInsp.quotes << shake
+soulInsp.quotes << winston
