@@ -6,8 +6,8 @@ module Api
       end
 
       def create
-        # byebug
-        newInspaural = Inspaural.new(inspaural_params)
+        newInspaural = Inspaural.find_or_create_by(inspaural_params)
+        newInspaural.name = params[:name]
         newInspaural.ambience = Ambience.find(params[:selectedAmbience][:id])
         newInspaural.user = User.find(1)
         newInspaural.quote1_vol = params[:quote1][:volume]
@@ -23,11 +23,6 @@ module Api
         end
       end
 
-      def update
-        # PLACEHOLDER
-        render :json => Inspaural.all
-      end
-
       def show
         render :json => Inspaural.find(params[:id])
       end
@@ -39,7 +34,7 @@ module Api
 
       private
       def inspaural_params
-        params.require(:inspaural).permit(:name)
+        params.require(:inspaural).permit(:id)
       end
     end
   end

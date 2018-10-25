@@ -33,10 +33,6 @@ export default function audioReducer(state = initState, action){
     case "FETCH_QUOTES":
       console.log("FETCH_QUOTES hit in reducer")
       console.log(action.quotes)
-      action.quotes.splice(5, 0, {id: "blank1", author: "", text: "", audioUrl: ""})
-      action.quotes.splice(6, 0, {id: "blank2", author: "", text: "", audioUrl: ""})
-      action.quotes.splice(9, 0, {id: "blank3", author: "", text: "", audioUrl: ""})
-      action.quotes.splice(10, 0, {id: "blank4", author: "", text: "", audioUrl: ""})
       return { ...state, quotes: action.quotes, loading: false }
 
     case "FETCH_AMBIENCES":

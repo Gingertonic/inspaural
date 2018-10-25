@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 testImage = "https://www.alambassociates.com/wp-content/uploads/2016/10/maxresdefault.jpg"
+loadingImage = "https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/4321112/580/386/m1/fpnw/wm0/paper_question_mark_logo_template-03-.png?1524123254&s=16fbcdc7bbae4cf8368e72fc77a04dbe"
 
 User.create(name: "Beti", email: "thegingertonicstudios@gmail.com", password: "test", password_confirmation: "test")
 User.create(name: "Aki", email: "al@gakovic.com", password: "password", password_confirmation: "password")
@@ -15,8 +16,12 @@ yes = Quote.create(author: "Barack Obama", text: "Yes we can", imageUrl: "https:
 heart = Quote.create(author: "Celine Dion", text: "The heart does go on", imageUrl: "https://www.grammy.com/sites/com/files/celinedion-spotlight-585581910.png", audioUrl: "https://www.looperman.com/media/loops/134239/looperman-l-0134239-0076754-devodale-devodale-word-const-kit-alphabet.mp3")
 frankly = Quote.create(author: "Clark", text: "Frankly my dear, I don't give a damn", imageUrl: "https://i.ytimg.com/vi/xLnTWxpTQt4/hqdefault.jpg", audioUrl: "https://www.looperman.com/media/loops/68799/looperman-l-0068799-0001716-bosonhavoc-die-die-die-die.mp3")
 indy = Quote.create(author: "Indiana Jones", text: "Why'd it have to be snakes?", imageUrl: "https://vignette.wikia.nocookie.net/indianajones/images/8/8c/Cobra.jpg/revision/latest?cb=20100304033804", audioUrl: "https://www.looperman.com/media/loops/159051/looperman-l-0159051-0127180-minor2go-my-3000th-loop-part-1.mp3")
+blank1 = Quote.create(author: "", text: "", audioUrl: "", imageUrl: loadingImage)
+blank1 = Quote.create(author: "", text: "", audioUrl: "", imageUrl: loadingImage)
 shake = Quote.create(author: "Taylor Swift", text: "Shake it off", imageUrl: "https://www.billboard.com/files/styles/article_main_image/public/media/taylor-swift-shake-it-off-video-2-2014-billboard-650.jpg", audioUrl: "https://www.looperman.com/media/loops/2659336/looperman-l-2659336-0125509-dzoh-hypeman.mp3")
 hurts = Quote.create(author: "R.E.M", text: "Everybody hurts sometimes", imageUrl: "https://i.ytimg.com/vi/ry1mfhc6a1E/hqdefault.jpg", audioUrl: "https://www.looperman.com/media/loops/134239/looperman-l-0134239-0076754-devodale-devodale-word-const-kit-alphabet.mp3")
+blank1 = Quote.create(author: "", text: "", audioUrl: "", imageUrl: loadingImage)
+blank1 = Quote.create(author: "", text: "", audioUrl: "", imageUrl: loadingImage)
 zelda = Quote.create(author: "Everyone", text: "Psst", imageUrl: "http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg", audioUrl: "https://www.looperman.com/media/loops/68799/looperman-l-0068799-0001716-bosonhavoc-die-die-die-die.mp3")
 winston = Quote.create(author: "Winston Churchill", text: "Speech", imageUrl: "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE5NTU2MzE2MTg0NzQxMzg3/winston-churchill-9248164-1-402.jpg", audioUrl: "http://soundbible.com/mp3/Winston Churchill Nazi Speech-SoundBible.com-877765747.mp3")
 owl = Quote.create(author: "Javone", text: "It were a owl", imageUrl: "http://www.fortitudemagazine.co.uk/wp-content/uploads/2013/07/Phoneshop-midres-21-crop-1024x904.jpg", audioUrl: "https://www.looperman.com/media/loops/2659336/looperman-l-2659336-0125509-dzoh-hypeman.mp3")
