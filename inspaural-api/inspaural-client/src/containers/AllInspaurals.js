@@ -6,8 +6,9 @@ class AllInspaurals extends Component {
     this.props.fetchInspaurals()
   }
 
-  loadInspaural = inspId => {
-    console.log('loading inspaural!')
+  loadInspaural = (e, inspId) => {
+    e.preventDefault()
+    this.props.fetchInspauralFromDb(inspId)
   }
 
   render(){

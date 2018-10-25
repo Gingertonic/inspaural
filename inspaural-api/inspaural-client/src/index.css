@@ -80,7 +80,7 @@ img[id^="blank"]{
   height: 80%
 }
 
-.inspaural-li {
+.inspaural-li, ul {
   font-family: monospace;
   list-style: none;
   padding: 0;

@@ -10,6 +10,16 @@ const loaded = () => {
   }
 }
 
+export const fetchInspauralFromDb = inspId => {
+  return dispatch => {
+    dispatch(loading());
+    fetch('/inspaurals/' + inspId)
+      .then(resp => resp.json())
+      .then(inspaural => console.log(inspaural))
+      // .then(inspaural => dispatch({type: "LOAD_INSPAURAL", inspId}))
+  }
+}
+
 export const updateAmbienceId = (ambienceId, newAmbienceAudioUrl, newAmbienceImageUrl) => {
   console.log("once in action, ambi id is " + ambienceId)
   return {
