@@ -31,7 +31,7 @@ module Api
       end
 
       def destroy
-        # PLACEHOLDER
+        Inspaural.find(params[:id]).destroy
         render :json => Inspaural.all
       end
 

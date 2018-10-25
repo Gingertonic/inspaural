@@ -90,3 +90,8 @@ img[id^="blank"]{
 .inspaural-li:hover {
   color: white;
 }
+
+.delete-button {
+  float: right;
+  margin-right: 5vh;
+}

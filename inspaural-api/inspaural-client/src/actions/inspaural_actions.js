@@ -19,6 +19,15 @@ export const fetchInspauralFromDb = inspId => {
   }
 }
 
+export const deleteInspauralFromDb = inspId => {
+  return dispatch => {
+    dispatch(loading());
+    fetch('inspaurals/' + inspId, {
+      method: "DELETE"
+    }).then(dispatch({type: "DELETE_INSPAURAL", inspId: inspId}))
+  }
+}
+
 export const updateAmbienceId = (ambienceId, newAmbienceAudioUrl, newAmbienceImageUrl) => {
   console.log("once in action, ambi id is " + ambienceId)
   return {

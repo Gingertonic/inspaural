@@ -7,13 +7,17 @@ class AllInspaurals extends Component {
   }
 
   loadInspaural = (e, inspId) => {
-    console.log("looking for inspaural with id " + inspId)
     e.preventDefault()
     this.props.fetchInspauralFromDb(inspId)
   }
 
+  deleteInspaural = (e, inspId) => {
+    e.preventDefault()
+    this.props.deleteInspauralFromDb(inspId)
+  }
+
   render(){
-    const renderInspaurals = this.props.allInspaurals.map(insp => <InspauralLi key={insp.id} loadInspaural={this.loadInspaural} insp={insp}/>)
+    const renderInspaurals = this.props.allInspaurals.map(insp => <InspauralLi key={insp.id} loadInspaural={this.loadInspaural} deleteInspaural={this.deleteInspaural} insp={insp}/>)
     return (
       <div className="inspaural-index-container">
         <ul>

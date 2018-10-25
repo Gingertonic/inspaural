@@ -11,7 +11,10 @@ export default function sessionReducer(state = initState, action){
 
     case "FETCH_INSPAURALS":
       return { ...state, inspaurals: [...action.inspaurals], loading: false }
-      
+
+    case "DELETE_INSPAURAL":
+      return { ...state, inspaurals: state.inspaurals.filter(insp => insp.id != action.inspId)}
+
     default:
       return state
   }

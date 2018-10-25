@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :quotes, only: [:index]
       resources :ambiences, only: [:index]
-      resources :inspaurals, only: [:index, :create, :show, :update]
+      resources :inspaurals, only: [:index, :create, :show, :update, :destroy]
     end
   end
 end
