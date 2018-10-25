@@ -60,7 +60,7 @@ export const resetQuotes = () => {
   }
 }
 
-export const saveInspauralToDB = data => {
+export const saveInspauralToDb = data => {
   return dispatch => {
     dispatch(loading());
     return fetch('/inspaurals', {

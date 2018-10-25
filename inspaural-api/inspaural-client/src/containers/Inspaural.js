@@ -9,7 +9,7 @@ import Playback from '../components/Playback'
 import { connect } from 'react-redux'
 import { fetchQuotes, fetchAmbiences } from '../actions/audio_actions'
 import { fetchInspaurals } from '../actions/session_actions'
-import { updateQuoteId, updateQuoteVolume, updateAmbienceId, updateAmbienceVolume, resetQuotes, saveInspauralToDB, loadInspaural, fetchInspauralFromDb, deleteInspauralFromDb} from '../actions/inspaural_actions'
+import { updateQuoteId, updateQuoteVolume, updateAmbienceId, updateAmbienceVolume, resetQuotes, saveInspauralToDb, loadInspaural, fetchInspauralFromDb, deleteInspauralFromDb} from '../actions/inspaural_actions'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class Inspaural extends Component {
@@ -22,8 +22,7 @@ class Inspaural extends Component {
   }
 
   saveInspaural = () => {
-    // e.preventDefault();
-    this.props.saveInspauralToDB(this.props.currentInspaural)
+    this.props.saveInspauralToDb(this.props.currentInspaural)
   }
 
   render(){
@@ -98,6 +97,7 @@ const mapDispatchToProps = dispatch => {
     fetchInspaurals: () => dispatch(fetchInspaurals()),
     fetchInspauralFromDb: inspId => dispatch(fetchInspauralFromDb(inspId)),
     deleteInspauralFromDb: inspId => dispatch(deleteInspauralFromDb(inspId)),
+    saveInspauralToDb: data => dispatch(saveInspauralToDb(data)),
     updateQuoteId: (quoteNum, quoteId, audioUrl, imageUrl) => dispatch(updateQuoteId(quoteNum, quoteId, audioUrl, imageUrl)),
     updateQuoteVolume: (quoteNum, newVolume) => dispatch(updateQuoteVolume(quoteNum, newVolume)),
     updateAmbienceId: (ambienceId, audioUrl, imageUrl) => dispatch(updateAmbienceId(ambienceId, audioUrl, imageUrl)),
