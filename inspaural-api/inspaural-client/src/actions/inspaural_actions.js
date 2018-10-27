@@ -62,7 +62,6 @@ export const resetQuotes = () => {
 
 export const saveInspauralToDb = data => {
   return dispatch => {
-    dispatch(loading());
     return fetch('/inspaurals', {
       method: "POST",
       headers: {

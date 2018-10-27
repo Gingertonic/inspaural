@@ -21,8 +21,8 @@ class Inspaural extends Component {
     this.props.fetchAmbiences();
   }
 
-  saveInspaural = () => {
-    this.props.saveInspauralToDb(this.props.currentInspaural)
+  saveInspaural = name => {
+    this.props.saveInspauralToDb(this.props.currentInspaural, name)
   }
 
   render(){
