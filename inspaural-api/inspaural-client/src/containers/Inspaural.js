@@ -9,7 +9,7 @@ import Playback from '../components/Playback'
 import { connect } from 'react-redux'
 import { fetchQuotes, fetchAmbiences } from '../actions/audio_actions'
 import { fetchInspaurals } from '../actions/session_actions'
-import { updateQuoteId, updateQuoteVolume, updateAmbienceId, updateAmbienceVolume, resetQuotes, saveInspauralToDb, loadInspaural, fetchInspauralFromDb, deleteInspauralFromDb} from '../actions/inspaural_actions'
+import { updateQuoteId, updateQuoteVolume, updateAmbienceId, updateAmbienceVolume, resetQuotes, saveInspauralToDb, loadInspaural, fetchInspauralFromDb, deleteInspauralFromDb, updateInspauralName } from '../actions/inspaural_actions'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class Inspaural extends Component {
@@ -22,7 +22,7 @@ class Inspaural extends Component {
   }
 
   saveInspaural = name => {
-    this.props.saveInspauralToDb(this.props.currentInspaural, name)
+    this.props.saveInspauralToDb(this.props.currentInspaural);
   }
 
   render(){
@@ -65,7 +65,7 @@ class Inspaural extends Component {
                     deleteInspauralFromDb={this.props.deleteInspauralFromDb}
                   />}
                 />
-              <InnerNav saveInspaural={this.saveInspaural}/>
+              <InnerNav saveInspaural={this.saveInspaural} currentName={this.props.currentInspaural.name} updateInspauralName={this.props.updateInspauralName}/>
               </React.Fragment>
             </Router>
           </div>
@@ -98,6 +98,7 @@ const mapDispatchToProps = dispatch => {
     fetchInspauralFromDb: inspId => dispatch(fetchInspauralFromDb(inspId)),
     deleteInspauralFromDb: inspId => dispatch(deleteInspauralFromDb(inspId)),
     saveInspauralToDb: data => dispatch(saveInspauralToDb(data)),
+    updateInspauralName: name => dispatch(updateInspauralName(name)),
     updateQuoteId: (quoteNum, quoteId, audioUrl, imageUrl) => dispatch(updateQuoteId(quoteNum, quoteId, audioUrl, imageUrl)),
     updateQuoteVolume: (quoteNum, newVolume) => dispatch(updateQuoteVolume(quoteNum, newVolume)),
     updateAmbienceId: (ambienceId, audioUrl, imageUrl) => dispatch(updateAmbienceId(ambienceId, audioUrl, imageUrl)),

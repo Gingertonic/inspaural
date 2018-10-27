@@ -60,6 +60,13 @@ export const resetQuotes = () => {
   }
 }
 
+export const updateInspauralName = name => {
+  console.log("in actions and handling name change to " + name)
+  return {
+    type: "UPDATE_INSPAURAL_NAME", name: name
+  }
+}
+
 export const saveInspauralToDb = data => {
   return dispatch => {
     return fetch('/inspaurals', {

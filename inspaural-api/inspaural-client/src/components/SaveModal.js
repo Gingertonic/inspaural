@@ -6,7 +6,7 @@ import TextField from '@material-ui/core/TextField';
 
 class SaveModal extends React.Component {
   state = {
-    name: "testing"
+    name: this.props.currentName
   }
 
   handleChange = e => {

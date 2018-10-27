@@ -36,6 +36,10 @@ export default function inspauralReducer(state = initState, action){
           loading: false
         }
 
+    case "UPDATE_INSPAURAL_NAME":
+      console.log("in reducer and handling name change to " + action.name)
+      return { ...state, name: action.name}
+
     case "RESET_QUOTES":
       return {
         ...state,

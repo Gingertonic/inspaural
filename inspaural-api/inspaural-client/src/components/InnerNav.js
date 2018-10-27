@@ -18,8 +18,8 @@ class InnerNav extends React.Component {
   };
 
   handleSave = name => {
+    this.props.updateInspauralName(name)
     this.handleClose();
-    this.props.saveInspaural(name);
   }
 
   render() {
@@ -28,7 +28,7 @@ class InnerNav extends React.Component {
       <div className="nav-bar">
        <NavLink to='/ambiences' exact>Ambiences</NavLink>
        <NavLink to='/mixer' exact onClick={this.handleOpen}>Save</NavLink>
-         <SaveModal openState={this.state.open} handleClose={this.handleClose} handleSave={this.handleSave}/>
+         <SaveModal openState={this.state.open} handleClose={this.handleClose} handleSave={this.handleSave} currentName={this.props.currentName}/>
        <NavLink to='/mixer' exact>Mixer</NavLink>
       </div>
 
