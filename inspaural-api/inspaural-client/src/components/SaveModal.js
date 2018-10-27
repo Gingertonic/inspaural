@@ -1,6 +1,6 @@
 import React from 'react'
-import Typography from '@material-ui/core/Typography';
 import Modal from '@material-ui/core/Modal';
+import Button from '@material-ui/core/Button';
 
 const SaveModal = props => {
   return (
@@ -10,13 +10,10 @@ const SaveModal = props => {
       open={props.openState}
       onClose={props.handleClose}
     >
-      <div>
-        <Typography variant="h6" id="modal-title">
-          Save
-        </Typography>
-        <Typography variant="subtitle1" id="simple-modal-description">
-          Put the name in here
-        </Typography>
+      <div className="save-modal">
+          Name your Inspaural...
+          <Button variant="outlined" color="primary" onClick={props.handleClose}>Save</Button>
+          <Button variant="outlined" color="secondary" onClick={props.handleClose}>Cancel</Button>
       </div>
     </Modal>
   )

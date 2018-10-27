@@ -80,3 +80,7 @@ a {
 a:hover {
   text-shadow: 2px 2px 4px #FFFFFF;
 }
+
+.save-modal {
+  font-family: 'Homemade Apple', cursive;
+}
