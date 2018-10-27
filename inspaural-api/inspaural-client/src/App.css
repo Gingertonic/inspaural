@@ -1,7 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 /* font-family: 'Sacramento', cursive;
 font-family: 'Homemade Apple', cursive; */
+/* font-family: 'Roboto', sans-serif; */
 
+/*
+   import React from 'react';
+   import Button from '@material-ui/core/Button';
+   import { NavLink } from 'react-router-dom';
+   import Modal from '@material-ui/core/Modal';
+
+   const InnerNav = props => {
+     return (
+       <div className="nav-bar">
+        <NavLink to='/ambiences' exact>Ambiences</NavLink>
+        <Button variant="fab" color="primary">
+           Save
+         </Button>
+          <NavLink to="/mixer" exact><div onClick={props.saveInspaural}>Save</div></NavLink>
+        <NavLink to='/mixer' exact>Mixer</NavLink>
+       </div>
+     )
+   } */
+
+   /* export default InnerNav */
 .inspaural {
   height: 90vh;
   width: 90vh;
