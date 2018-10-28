@@ -30,8 +30,7 @@ class InnerNav extends React.Component {
     return (
       <div className="nav-bar">
        <NavLink to='/ambiences' exact>Ambiences</NavLink>
-       <NavLink to='/mixer' exact onClick={this.handleOpen}>Save</NavLink>
-         <SaveModal openState={this.state.open} handleClose={this.handleClose} handleSave={this.handleSave} name={this.props.name} updateName={this.props.updateInspauralName}/>
+       <NavLink to='/save' exact>Save</NavLink>
        <NavLink to='/mixer' exact>Mixer</NavLink>
       </div>
 

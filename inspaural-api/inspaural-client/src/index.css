@@ -7,12 +7,12 @@
   align-content: space-between;
 }
 
-.ambiences-container, .mixer-container, .inspaural-index-container {
+.ambiences-container, .mixer-container, .inspaural-index-container, .save-dialog {
   justify-content: space-around;
   height: 25vh;
 }
 
-.inspaural-index-container {
+.inspaural-index-container, .save-dialog {
   padding-top: 4vh;
   padding-bottom: 4vh;
 }

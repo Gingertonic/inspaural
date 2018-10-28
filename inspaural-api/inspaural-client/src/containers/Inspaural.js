@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import InnerDisplay from '../containers/InnerDisplay'
 import InnerNav from '../components/InnerNav'
+import SaveDialog from '../components/SaveDialog'
 import AllInspaurals from '../containers/AllInspaurals'
 import Quotes from '../containers/Quotes'
 import Ambiences from '../containers/Ambiences'
@@ -9,7 +10,7 @@ import Playback from '../components/Playback'
 import { connect } from 'react-redux'
 import { fetchQuotes, fetchAmbiences } from '../actions/audio_actions'
 import { fetchInspaurals } from '../actions/session_actions'
-import { updateQuoteId, updateQuoteVolume, updateAmbienceId, updateAmbienceVolume, resetQuotes, saveInspauralToDb, loadInspaural, fetchInspauralFromDb, deleteInspauralFromDb } from '../actions/inspaural_actions'
+import { updateQuoteId, updateQuoteVolume, updateAmbienceId, updateAmbienceVolume, resetQuotes, saveInspauralToDb, loadInspaural, fetchInspauralFromDb, deleteInspauralFromDb, updateInspauralName } from '../actions/inspaural_actions'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class Inspaural extends Component {
@@ -66,7 +67,14 @@ class Inspaural extends Component {
                     deleteInspauralFromDb={this.props.deleteInspauralFromDb}
                   />}
                 />
-              <InnerNav saveInspaural={this.saveInspaural} updateInspauralName={this.props.updateInspauralName}/>
+                <Route exact path = '/save'
+                  render={props => <SaveDialog {...props}
+                    currentName={this.props.currentInspaural.name}
+                    saveInspaural={this.saveInspaural}
+                    updateInspauralName={this.props.updateInspauralName}
+                  />}
+                />
+              <InnerNav/>
               </React.Fragment>
             </Router>
           </div>
@@ -98,6 +106,7 @@ const mapDispatchToProps = dispatch => {
     fetchInspaurals: () => dispatch(fetchInspaurals()),
     fetchInspauralFromDb: inspId => dispatch(fetchInspauralFromDb(inspId)),
     deleteInspauralFromDb: inspId => dispatch(deleteInspauralFromDb(inspId)),
+    updateInspauralName: name => dispatch(updateInspauralName(name)),
     saveInspauralToDb: data => dispatch(saveInspauralToDb(data)),
     updateQuoteId: (quoteNum, quoteId, audioUrl, imageUrl) => dispatch(updateQuoteId(quoteNum, quoteId, audioUrl, imageUrl)),
     updateQuoteVolume: (quoteNum, newVolume) => dispatch(updateQuoteVolume(quoteNum, newVolume)),
