@@ -5,8 +5,9 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 
 class SaveModal extends React.Component {
+
   state = {
-    name: this.props.currentName
+    name: this.props.name
   }
 
   handleChange = e => {
@@ -32,10 +33,10 @@ class SaveModal extends React.Component {
               onChange={e => this.handleChange(e)}
               margin="normal"
             />
-            <Button variant="outlined" color="primary" onClick={() => this.props.handleSave(this.state.name)}>
+            <Button variant="outlined" color="primary" onClick={() => this.props.handleSave(this.props.name)}>
               <NavLink to="/mixer" exact>Save</NavLink>
             </Button>
-            <Button variant="outlined" color="secondary" onClick={this.props.handleClose}>Cancel</Button>
+            <Button variant="outlined" color="secondary" onClick={() => this.props.handleClose}>Cancel</Button>
         </div>
       </Modal>
     )
