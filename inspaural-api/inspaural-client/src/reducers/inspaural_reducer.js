@@ -92,14 +92,6 @@ export default function inspauralReducer(state = initState, action){
           return {...state, quote4: {...state.quote4, volume: action.newQuoteVolume}, loading: false}
       }
 
-
-
-    // case "SAVE_INSPAURAL":
-    //   return {...state, loading: false}
-    //
-    // case "DELETE_INSPAURAL":
-    //   return initState
-
     default:
       return state
   }

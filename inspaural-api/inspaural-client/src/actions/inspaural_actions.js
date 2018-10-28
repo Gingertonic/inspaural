@@ -77,7 +77,6 @@ export const saveInspauralToDb = data => {
       },
       body: JSON.stringify(data)
     }).then(resp => resp.json())
-    .then(json => console.log(json))
-    .then(dispatch(loaded))
+    .then(json => dispatch({type: "ADD_INSPAURAL", newInspaural: json}))
   }
 }

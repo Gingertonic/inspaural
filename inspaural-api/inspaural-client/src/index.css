@@ -12,12 +12,16 @@
   height: 25vh;
 }
 
-.inspaural-index-container, .save-dialog, .welcome-dialog {
+.inspaural-index-container, .save-dialog {
   padding-top: 4vh;
   padding-bottom: 4vh;
 }
 
-.ambiences-container {
+.inspaural-index-container {
+  overflow: scroll;
+}
+
+.ambiences-container, .welcome-dialog {
   padding-top: 5vh;
   padding-bottom: 3vh;
 }
