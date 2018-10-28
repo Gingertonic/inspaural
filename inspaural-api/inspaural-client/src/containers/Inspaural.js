@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import InnerDisplay from '../containers/InnerDisplay'
 import InnerNav from '../components/InnerNav'
 import SaveDialog from '../components/SaveDialog'
+import Welcome from '../components/Welcome'
 import AllInspaurals from '../containers/AllInspaurals'
 import Quotes from '../containers/Quotes'
 import Ambiences from '../containers/Ambiences'
@@ -46,6 +47,7 @@ class Inspaural extends Component {
             <Router>
               <React.Fragment>
                 <Route path = '/' component={InnerDisplay}/>
+                <Route exact path = '/' component={Welcome}/>
                 <Route exact path = '/mixer'
                   render={props => <Mixer {...props}
                     updateQuoteVolume={this.props.updateQuoteVolume}

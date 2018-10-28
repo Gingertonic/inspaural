@@ -22,7 +22,6 @@ class SaveDialog extends Component {
 
   saveAndClose = e => {
     e.preventDefault()
-    console.log(e.target.nameInput.value)
     this.props.updateInspauralName(e.target.nameInput.value)
     setTimeout(this.props.saveInspaural, 2000)
     this.setRedirect()
