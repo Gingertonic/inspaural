@@ -104,6 +104,24 @@ img[id^="blank"]{
   color: red;
 }
 
+input[type=submit] {
+  background-color: lightblue;
+  font-family: monospace;
+  color: darkred;
+  border: 1px dashed white;
+}
+
+input[type="text"] {
+  width: 50%;
+  margin: 5vh;
+  padding: 1vh;
+  border-radius: 2px;
+  text-align: center;
+  color: lightblue;
+  border: lightblue;
+  font-family: monospace;
+}
+
 .error-alert {
   padding: 5vh;
   margin: 3vh;

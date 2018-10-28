@@ -49,14 +49,15 @@ class SaveDialog extends Component {
       return <Redirect to='/ambiences'/>;
     } else {
       return (
-        <div className="save-dialog" onSubmit={this.saveAndClose}>
-          <form>
+        <div>
+          <form className="save-dialog" onSubmit={this.saveAndClose}>
             <input
               name="nameInput"
               type="text"
               ref="nameInput"
               defaultValue={this.props.currentName}
               onChange={e => this.handleChange(e)}
+              autofocus="true"
             />
           <Dialog
             open={this.state.openAlert}
@@ -66,7 +67,8 @@ class SaveDialog extends Component {
               Please choose an ambience for your inspaural before saving!
             </div>
           </Dialog>
-            <input type="submit" value="Save" />
+            <br />
+            <input type="submit" className="save-button" value="Save" />
           </form>
         </div>
       )
