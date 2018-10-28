@@ -71,6 +71,7 @@ class Inspaural extends Component {
                 />
                 <Route exact path = '/save'
                   render={props => <SaveDialog {...props}
+                    currentAmbienceId={this.props.selectedAmbience.id}
                     currentName={this.props.currentInspaural.name}
                     saveInspaural={this.saveInspaural}
                     updateInspauralName={this.props.updateInspauralName}
