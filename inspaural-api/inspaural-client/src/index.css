@@ -87,8 +87,7 @@ img[id^="blank"]{
 .inspaural-li, ul {
   font-family: monospace;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  text-align: center;
 }
 
 .inspaural-li:hover {
@@ -98,4 +97,9 @@ img[id^="blank"]{
 .delete-button {
   float: right;
   margin-right: 5vh;
+  color: lightblue;
+}
+
+.delete-button:hover {
+  color: red;
 }

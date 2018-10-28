@@ -25,6 +25,7 @@ export const deleteInspauralFromDb = inspId => {
     fetch('inspaurals/' + inspId, {
       method: "DELETE"
     }).then(dispatch({type: "DELETE_INSPAURAL", inspId: inspId}))
+    .then(dispatch({type: "RESET_CURRENT_INSPAURAL"}))
   }
 }
 
