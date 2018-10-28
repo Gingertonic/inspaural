@@ -62,7 +62,9 @@ class SaveDialog extends Component {
             open={this.state.openAlert}
             onClose={this.handleClose}
           >
-            You need to choose an ambience for your inspaural before saving!
+            <div className="error-alert">
+              Please choose an ambience for your inspaural before saving!
+            </div>
           </Dialog>
             <input type="submit" value="Save" />
           </form>

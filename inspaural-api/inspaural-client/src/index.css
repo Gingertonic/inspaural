@@ -103,3 +103,13 @@ img[id^="blank"]{
 .delete-button:hover {
   color: red;
 }
+
+.error-alert {
+  padding: 5vh;
+  margin: 3vh;
+  border: 2px solid lightblue;
+  font-family: monospace;
+  text-align: center;
+  width: 40vh;
+  color: grey;
+}
