@@ -4,12 +4,6 @@ const loading = () => {
   }
 }
 
-const loaded = () => {
-  return {
-    type: "LOADED"
-  }
-}
-
 export const fetchInspauralFromDb = inspId => {
   return dispatch => {
     dispatch(loading());

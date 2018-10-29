@@ -1,7 +1,5 @@
 import React from 'react';
-import SaveModal from './SaveModal'
 import { NavLink } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux'
 import { updateInspauralName } from '../actions/inspaural_actions'
 

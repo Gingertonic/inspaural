@@ -13,8 +13,6 @@ const initState = {
 }
 
 export default function inspauralReducer(state = initState, action){
-  let idx;
-  let newState;
   switch(action.type){
     case "LOADING":
       return {...state, loading: true}
@@ -77,6 +75,9 @@ export default function inspauralReducer(state = initState, action){
         case 4:
           state.selectedQuoteIds[3] = action.newQuoteId
           return {...state, quote4: {...state.quote4, id: action.newQuoteId, audioUrl: action.newQuoteAudioUrl, imageUrl: action.newQuoteImageUrl}, loading: false}
+
+        default:
+          return state
       }
 
     case "UPDATE_QUOTE_VOLUME":
@@ -93,6 +94,9 @@ export default function inspauralReducer(state = initState, action){
 
         case 4:
           return {...state, quote4: {...state.quote4, volume: action.newQuoteVolume}, loading: false}
+
+        default:
+          return state;
       }
 
     default:

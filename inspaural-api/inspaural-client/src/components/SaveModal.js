@@ -42,5 +42,3 @@ class SaveModal extends React.Component {
     )
   }
 }
-
-export default SaveModal

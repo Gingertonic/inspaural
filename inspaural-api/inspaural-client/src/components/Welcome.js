@@ -3,16 +3,7 @@ import React from 'react';
 const Welcome = () => {
   return (
     <div className="welcome-dialog">
-      Welcome!
-      <div className="instruction">
-        1. Select your ambience
-      </div>
-      <div className="instruction">
-        2. Select your quotes
-      </div>
-      <div className="instruction">
-        3. Name and Save!
-      </div>
+      <img className="instructional-gif" src="https://media.giphy.com/media/pHXGCfTPsHKIyGrjkq/giphy.gif" alt="instructional gif" />
     </div>
   )
 }

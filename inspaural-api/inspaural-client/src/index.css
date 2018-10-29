@@ -21,7 +21,7 @@
   overflow: scroll;
 }
 
-.ambiences-container, .welcome-dialog {
+.ambiences-container {
   padding-top: 5vh;
   padding-bottom: 3vh;
 }
@@ -29,6 +29,11 @@
 .mixer-container {
   padding-top: 2vh;
   padding-bottom: 6vh;
+}
+
+.welcome-dialog {
+  padding-top: 3.5vh;
+  padding-bottom: 4.5vh;
 }
 
 

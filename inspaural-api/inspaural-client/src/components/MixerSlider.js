@@ -12,7 +12,7 @@ const MixerSlider = props => {
             orientation="vertical"
             onChange={value => props.handleChange(value, props.track.quoteNum)}
           />
-        <img className="mixer-track-thumb" src={props.track.imageUrl} />
+        <img className="mixer-track-thumb" alt="Track thumbnail" src={props.track.imageUrl} />
         </div>
       </React.Fragment>
     )

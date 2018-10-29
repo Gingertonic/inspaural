@@ -7,11 +7,10 @@ import AllInspaurals from '../containers/AllInspaurals'
 import Quotes from '../containers/Quotes'
 import Ambiences from '../containers/Ambiences'
 import Mixer from '../containers/Mixer'
-import Playback from '../components/Playback'
 import { connect } from 'react-redux'
 import { fetchQuotes, fetchAmbiences } from '../actions/audio_actions'
 import { fetchInspaurals } from '../actions/session_actions'
-import { updateQuoteId, updateQuoteVolume, updateAmbienceId, updateAmbienceVolume, resetQuotes, saveInspauralToDb, loadInspaural, fetchInspauralFromDb, deleteInspauralFromDb, updateInspauralName } from '../actions/inspaural_actions'
+import { updateQuoteId, updateQuoteVolume, updateAmbienceId, updateAmbienceVolume, resetQuotes, saveInspauralToDb, fetchInspauralFromDb, deleteInspauralFromDb, updateInspauralName } from '../actions/inspaural_actions'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class Inspaural extends Component {

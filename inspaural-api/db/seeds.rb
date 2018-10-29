@@ -35,7 +35,7 @@ Ambience.create(name: "Party", imageUrl: "http://titan.titanfm.co.uk/wp-content/
 Ambience.create(name: "Drama", imageUrl: "http://africanleadership.co.uk/wp-content/uploads/2017/11/strength.jpg", audioUrl: "https://www.looperman.com/media/loops/2879189/looperman-l-2879189-0139015-piano-melody-cold-snow-strom-type.mp3")
 
 soulInsp = Inspaural.create(user_id: 1, ambience_id: 2, name: "Soul Positivity", quote1_vol: 40, quote2_vol: 50, quote3_vol: 60, quote4_vol: 45, ambience_vol: 35)
-loveInsp = Inspaural.create(user_id: 2, ambience_id: 1, name: "Loving time", quote1_vol: 50, quote2_vol: 20, quote3_vol: 40, quote4_vol: 37, ambience_vol: 43)
+loveInsp = Inspaural.create(user_id: 2, ambience_id: 1, name: "Inspa and Chill", quote1_vol: 50, quote2_vol: 20, quote3_vol: 40, quote4_vol: 37, ambience_vol: 43)
 
 loveInsp.quotes << hawking
 loveInsp.quotes << rosa
