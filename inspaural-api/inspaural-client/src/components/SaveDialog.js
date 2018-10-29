@@ -67,8 +67,8 @@ class SaveDialog extends Component {
               Please choose an ambience for your inspaural before saving!
             </div>
           </Dialog>
-            <br />
-            <input type="submit" className="save-button" value="Save" />
+          <br />
+          <input type="submit" className="save-button" value="SAVE" />
           </form>
         </div>
       )

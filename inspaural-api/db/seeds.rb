@@ -11,22 +11,23 @@ loadingImage = "https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/4321112/58
 User.create(name: "Beti", email: "thegingertonicstudios@gmail.com", password: "test", password_confirmation: "test")
 User.create(name: "Aki", email: "al@gakovic.com", password: "password", password_confirmation: "password")
 
-bridge = Quote.create(author: "James Brown", text: "Take it to the bridge", imageUrl: "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTIwNjA4NjMzNzU0ODQ2NzMy/james-brown-9228350-1-402.jpg", audioUrl: "https://www.looperman.com/media/loops/159051/looperman-l-0159051-0127180-minor2go-my-3000th-loop-part-1.mp3")
-yes = Quote.create(author: "Barack Obama", text: "Yes we can", imageUrl: "https://www.biography.com/.image/t_share/MTE4MDAzNDEwNzg5ODI4MTEw/barack-obama-12782369-1-402.jpg", audioUrl: "http://soundbible.com/mp3/Obama State Of The Union 2010-SoundBible.com-1976559822.mp3")
-heart = Quote.create(author: "Celine Dion", text: "The heart does go on", imageUrl: "https://www.grammy.com/sites/com/files/celinedion-spotlight-585581910.png", audioUrl: "https://www.looperman.com/media/loops/134239/looperman-l-0134239-0076754-devodale-devodale-word-const-kit-alphabet.mp3")
-frankly = Quote.create(author: "Clark", text: "Frankly my dear, I don't give a damn", imageUrl: "https://i.ytimg.com/vi/xLnTWxpTQt4/hqdefault.jpg", audioUrl: "https://www.looperman.com/media/loops/68799/looperman-l-0068799-0001716-bosonhavoc-die-die-die-die.mp3")
-indy = Quote.create(author: "Indiana Jones", text: "Why'd it have to be snakes?", imageUrl: "https://vignette.wikia.nocookie.net/indianajones/images/8/8c/Cobra.jpg/revision/latest?cb=20100304033804", audioUrl: "https://www.looperman.com/media/loops/159051/looperman-l-0159051-0127180-minor2go-my-3000th-loop-part-1.mp3")
+teresa = Quote.create(author: "Mother Teresa", text: "Love each other", imageUrl: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201508/teresa-647-x-404_082615124557.jpg", audioUrl: "/audioclips/MotherTeresa.mp3")
+hawking = Quote.create(author: "Stephen Hawking", text: "Look up to the stars", imageUrl: "https://media-assets-05.thedrum.com/cache/images/thedrum-prod/s3-h_0--2x1--898.jpg", audioUrl: "/audioclips/StephenHawking.mp3")
+maya = Quote.create(author: "Maya Angelou", text: "Believe", imageUrl: "https://www.biography.com/.image/t_share/MTQ3NjM5NTA5NjU4Mzc5NjUy/maya_angelou_photo_by_deborah_feingold_corbis_entertainment_getty_533084708.jpg", audioUrl: "/audioclips/MayaAngelou.mp3")
+harry = Quote.create(author: "Prince Harry", text: "We have risen from pessimisim", imageUrl: "https://i.ytimg.com/vi/xBVgJyYRVJg/maxresdefault.jpg", audioUrl: "/audioclips/PrinceHarry.mp3")
+mahatma = Quote.create(author: "Mahatma Gandhi", text: "There is an unmistakable", imageUrl: "https://kidengage.com/blog/wp-content/uploads/2018/09/4-indian-gandhi-paintings.preview.jpg", audioUrl: "/audioclips/MahatmaGandhi.mp3")
 blank1 = Quote.create(author: "", text: "", audioUrl: "", imageUrl: loadingImage)
 blank1 = Quote.create(author: "", text: "", audioUrl: "", imageUrl: loadingImage)
-shake = Quote.create(author: "Taylor Swift", text: "Shake it off", imageUrl: "https://www.billboard.com/files/styles/article_main_image/public/media/taylor-swift-shake-it-off-video-2-2014-billboard-650.jpg", audioUrl: "https://www.looperman.com/media/loops/2659336/looperman-l-2659336-0125509-dzoh-hypeman.mp3")
-hurts = Quote.create(author: "R.E.M", text: "Everybody hurts sometimes", imageUrl: "https://i.ytimg.com/vi/ry1mfhc6a1E/hqdefault.jpg", audioUrl: "https://www.looperman.com/media/loops/134239/looperman-l-0134239-0076754-devodale-devodale-word-const-kit-alphabet.mp3")
+rosa = Quote.create(author: "Rosa Parks", text: "Stand up", imageUrl: "https://daniellemcguire.com/wp-content/uploads/2010/09/rosa-parks-84620846-E.jpeg", audioUrl: "/audioclips/RosaParks.mp3")
+sheryl = Quote.create(author: "Sheryl Sandberg", text: "Resilience", imageUrl: "https://s3.amazonaws.com/one_org_international/international/media/international/2014/05/SSandberg-large.jpg", audioUrl: "/audioclips/SherylSandberg.mp3")
 blank1 = Quote.create(author: "", text: "", audioUrl: "", imageUrl: loadingImage)
 blank1 = Quote.create(author: "", text: "", audioUrl: "", imageUrl: loadingImage)
-zelda = Quote.create(author: "Everyone", text: "Psst", imageUrl: "http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg", audioUrl: "https://www.looperman.com/media/loops/68799/looperman-l-0068799-0001716-bosonhavoc-die-die-die-die.mp3")
-winston = Quote.create(author: "Winston Churchill", text: "Speech", imageUrl: "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE5NTU2MzE2MTg0NzQxMzg3/winston-churchill-9248164-1-402.jpg", audioUrl: "http://soundbible.com/mp3/Winston Churchill Nazi Speech-SoundBible.com-877765747.mp3")
-owl = Quote.create(author: "Javone", text: "It were a owl", imageUrl: "http://www.fortitudemagazine.co.uk/wp-content/uploads/2013/07/Phoneshop-midres-21-crop-1024x904.jpg", audioUrl: "https://www.looperman.com/media/loops/2659336/looperman-l-2659336-0125509-dzoh-hypeman.mp3")
-free = Quote.create(author: "John Inman", text: "I'm free", imageUrl: "http://www.johninman.co.uk/images/head.gif", audioUrl: "https://www.looperman.com/media/loops/134239/looperman-l-0134239-0076754-devodale-devodale-word-const-kit-alphabet.mp3")
-# avi = Quote.create(author: "Avi", text: "Student for life", imageUrl: "https://flatiron-v3-production.imgix.net/avi-flombaum.jpg?h=240&w=240&facepad=2&fit=facearea&ixlib=imgixjs-3.3.0", audioUrl: "https://www.looperman.com/media/loops/68799/looperman-l-0068799-0001716-bosonhavoc-die-die-die-die.mp3")
+robin = Quote.create(author: "Robin Williams in Dead Poets Society", text: "Yes we can", imageUrl: "https://unaffiliatedcritic.com/wp-content/uploads/2018/01/Robin-Williams-in-Dead-Poets-Society.jpg", audioUrl: "/audioclips/RobinWilliamsDeadPoets.mp3")
+# yes = Quote.create(author: "Barack Obama", text: "Yes we can", imageUrl: "https://www.biography.com/.image/t_share/MTE4MDAzNDEwNzg5ODI4MTEw/barack-obama-12782369-1-402.jpg", audioUrl: "http://soundbible.com/mp3/Obama State Of The Union 2010-SoundBible.com-1976559822.mp3")
+will = Quote.create(author: "Will Smith in The Pursuit of Happyness", text: "If you want something", imageUrl: "http://www.wingclips.com/system/movie-clips/the-pursuit-of-happyness/internship-interview/images/the-pursuit-of-happyness-movie-clip-screenshot-internship-interview_large.jpg", audioUrl: "/audioclips/WillSmithPursuitHappyness.mp3")
+# winston = Quote.create(author: "Winston Churchill", text: "Speech", imageUrl: "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE5NTU2MzE2MTg0NzQxMzg3/winston-churchill-9248164-1-402.jpg", audioUrl: "http://soundbible.com/mp3/Winston Churchill Nazi Speech-SoundBible.com-877765747.mp3")
+rowling = Quote.create(author: "JK Rowling", text: "Failure", imageUrl: "https://fotografias.antena3.com/clipping/cmsimages02/2016/08/02/D568E171-BBB4-4B58-ABB5-F65D0A97C343/58.jpg", audioUrl: "/audioclips/JKRowling.mp3")
+avi = Quote.create(author: "Avi", text: "Student for life", imageUrl: "https://flatiron-v3-production.imgix.net/avi-flombaum.jpg?h=240&w=240&facepad=2&fit=facearea&ixlib=imgixjs-3.3.0", audioUrl: "/audioclips/Avi.mp3")
 
 Ambience.create(name: "Chill", imageUrl: "https://www.worcsu.com/asset/Event/6013/chill.jpg", audioUrl: "https://www.looperman.com/media/loops/1297038/looperman-l-1297038-0141300-loner-mocha-jones-chill-x-spacey-pad-chords.mp3")
 Ambience.create(name: "Soul", imageUrl: "https://cdn.dribbble.com/users/44134/screenshots/914778/soul.jpg", audioUrl: "https://www.looperman.com/media/loops/2158587/looperman-l-2158587-0136724-gentle-soul-drums.mp3")
@@ -36,12 +37,12 @@ Ambience.create(name: "Drama", imageUrl: "http://africanleadership.co.uk/wp-cont
 soulInsp = Inspaural.create(user_id: 1, ambience_id: 2, name: "Soul Positivity", quote1_vol: 40, quote2_vol: 50, quote3_vol: 60, quote4_vol: 45, ambience_vol: 35)
 loveInsp = Inspaural.create(user_id: 2, ambience_id: 1, name: "Loving time", quote1_vol: 50, quote2_vol: 20, quote3_vol: 40, quote4_vol: 37, ambience_vol: 43)
 
-loveInsp.quotes << heart
-loveInsp.quotes << frankly
-loveInsp.quotes << hurts
-loveInsp.quotes << zelda
+loveInsp.quotes << hawking
+loveInsp.quotes << rosa
+loveInsp.quotes << rowling
+loveInsp.quotes << avi
 
-soulInsp.quotes << bridge
-soulInsp.quotes << yes
-soulInsp.quotes << shake
-soulInsp.quotes << winston
+soulInsp.quotes << robin
+soulInsp.quotes << mahatma
+soulInsp.quotes << maya
+soulInsp.quotes << sheryl
