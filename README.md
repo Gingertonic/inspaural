@@ -4,6 +4,7 @@
 
 # inspaural
 Design your own audio inspiration
+[Visit the app in action here](http//inspaural.herokuapp.com) - tested in Chrome, Firefox and Opera
 
 At a minimum, users can:
   + See and listen to a selection of quotes
