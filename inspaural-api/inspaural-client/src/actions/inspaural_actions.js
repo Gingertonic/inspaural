@@ -16,7 +16,7 @@ export const fetchInspauralFromDb = inspId => {
 export const deleteInspauralFromDb = inspId => {
   return dispatch => {
     dispatch(loading());
-    fetch('inspaurals/' + inspId, {
+    fetch('/inspaurals/' + inspId, {
       method: "DELETE"
     }).then(dispatch({type: "DELETE_INSPAURAL", inspId: inspId}))
     .then(dispatch({type: "RESET_CURRENT_INSPAURAL"}))
