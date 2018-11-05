@@ -5,11 +5,7 @@
 # inspaural
 Design your own audio inspiration
 [Visit the app in action here](http://inspaural.herokuapp.com) - tested in Chrome, Firefox and Opera
-
-<p align="center">
-  <img src="https://media.giphy.com/media/pHXGCfTPsHKIyGrjkq/giphy-downsized-large.gif" alt="Inspaural instructional gif" width="50%">
-</p>
-                                                                                                                         
+                                                                                                                    
 
 At a minimum, users can:
   + See and listen to a selection of quotes
