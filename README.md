@@ -7,7 +7,7 @@ Design your own audio inspiration
 [Visit the app in action here](http://inspaural.herokuapp.com) - tested in Chrome, Firefox and Opera
 
 <p align="center">
-  <img src="https://media.giphy.com/media/pHXGCfTPsHKIyGrjkq/giphy.gif" alt="Inspaural instructional gif" width="50%">
+  <img src="https://media.giphy.com/media/pHXGCfTPsHKIyGrjkq/giphy-downsized-large.gif" alt="Inspaural instructional gif" width="50%">
 </p>
                                                                                                                          
 
