@@ -9,6 +9,8 @@ Design your own audio inspiration
 <p align="center">
   <img src="https://media.giphy.com/media/pHXGCfTPsHKIyGrjkq/giphy-downsized-large.gif" alt="Inspaural instructional gif" width="50%">
 </p>
+
+![](https://media.giphy.com/media/pHXGCfTPsHKIyGrjkq/giphy-downsized-large.gif)
                                                                                                                          
 
 At a minimum, users can:
