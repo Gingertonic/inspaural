@@ -5,6 +5,7 @@
 # inspaural
 Design your own audio inspiration
 [Visit the app in action here](http://inspaural.herokuapp.com) - tested in Chrome, Firefox and Opera
+                                                                                                                    
 
 At a minimum, users can:
   + See and listen to a selection of quotes
@@ -76,8 +77,8 @@ To do this:
   5. submit a pull request
 
 After submitting your pull request, I will review it as soon as I can.
-It would super extra awesome if you can
-  + Include tests for you new features
+It would super extra awesome if you can:
+  + Include tests for your new features
   + Make a relevant commit message and add a solid description with the request.
 
 ## License
