@@ -5,6 +5,7 @@
 # inspaural
 Design your own audio inspiration
 [Visit the app in action here](http://inspaural.herokuapp.com) - tested in Chrome, Firefox and Opera
+[Read my blog post about this proejct here](https://medium.com/@bethmschofield/divine-inspauration-7cce2acf9ff7)
                                                                                                                     
 
 At a minimum, users can:
